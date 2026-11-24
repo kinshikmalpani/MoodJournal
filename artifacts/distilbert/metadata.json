@@ -1,0 +1,5 @@
+{
+  "version": "distilbert-partial-epoch1-v1",
+  "threshold": 0.35,
+  "weights_sha256": "5f20298581d0c68501d86a8f30123e407a21fa727d5d0b256785b903c6bd76ce"
+}

@@ -1,0 +1,4253 @@
+{
+  "scope": "AI-authored development diagnostics; not an independent test or clinical validation.",
+  "fixture_sha256": "712cd61cd146881ee0a83f915b206d44f927708f5e9e5076b08a4ca2fbc2929b",
+  "case_count": 41,
+  "models": {
+    "baseline": {
+      "version": "tfidf-logreg-v1",
+      "benchmark_validation_macro_f1": 0.86101904635284,
+      "benchmark_test_accuracy": 0.8825,
+      "benchmark_test_macro_f1": 0.8396825551653387,
+      "development_single_label_count": 28,
+      "development_chunked_macro_f1": 0.6327505827505827,
+      "development_whole_macro_f1": 0.6292152292152292,
+      "neutral_abstained": 3,
+      "neutral_count": 6,
+      "mixed_both_detected": 4,
+      "mixed_count": 6,
+      "median_journal_latency_ms": 0.8598999993409961,
+      "cases": [
+        {
+          "id": "dev-001",
+          "category": "direct",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I am furious that my colleague took credit for my work.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "anger",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger"
+          ],
+          "seconds": 0.0032056000018201303,
+          "scores": {
+            "anger": 0.7240703309430602,
+            "fear": 0.051206406573534195,
+            "joy": 0.06089443341857627,
+            "love": 0.056696249805292684,
+            "sadness": 0.08504361758657716,
+            "surprise": 0.02208896167295942
+          }
+        },
+        {
+          "id": "dev-002",
+          "category": "direct",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "Being interrupted again left me irritated and resentful.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "anger",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger"
+          ],
+          "seconds": 0.0009209999989252537,
+          "scores": {
+            "anger": 0.9855502112497478,
+            "fear": 0.004343003736087206,
+            "joy": 0.002962783697488943,
+            "love": 0.0030597203568946325,
+            "sadness": 0.002896352860870865,
+            "surprise": 0.0011879280989106121
+          }
+        },
+        {
+          "id": "dev-003",
+          "category": "negation",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I am not scared of him. I am angry that he lied to me.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "fear",
+            "anger"
+          ],
+          "seconds": 0.0008455999995931052,
+          "scores": {
+            "anger": 0.46987580911013277,
+            "fear": 0.46309491698247196,
+            "joy": 0.01590257447262501,
+            "love": 0.02291711220479436,
+            "sadness": 0.022303348602614397,
+            "surprise": 0.0059062386273613845
+          }
+        },
+        {
+          "id": "dev-004",
+          "category": "journal",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I spent the afternoon fixing a mistake that was not mine. When the manager blamed me in front of everyone, I wanted to shout. Even after getting home I was still furious about how unfair it was.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "uncertain",
+            "sadness",
+            "anger"
+          ],
+          "seconds": 0.000961599998845486,
+          "scores": {
+            "anger": 0.3668006153983838,
+            "fear": 0.10533573733054409,
+            "joy": 0.15272850098360294,
+            "love": 0.0721065307003196,
+            "sadness": 0.2679385249485172,
+            "surprise": 0.03509009063863219
+          }
+        },
+        {
+          "id": "dev-005",
+          "category": "direct",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "I am terrified about what the test results might show.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "fear",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "fear"
+          ],
+          "seconds": 0.0007961999981489498,
+          "scores": {
+            "anger": 0.006433996912015223,
+            "fear": 0.9650885166361861,
+            "joy": 0.01624858624617758,
+            "love": 0.005263412349702551,
+            "sadness": 0.004235080555721941,
+            "surprise": 0.002730407300196585
+          }
+        },
+        {
+          "id": "dev-006",
+          "category": "direct",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "Every unfamiliar noise tonight makes me nervous.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "fear",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "fear"
+          ],
+          "seconds": 0.0007646999983990099,
+          "scores": {
+            "anger": 0.030528570179650823,
+            "fear": 0.9060229561083161,
+            "joy": 0.02868679443644984,
+            "love": 0.007481207493691314,
+            "sadness": 0.01572358924915809,
+            "surprise": 0.011556882532734137
+          }
+        },
+        {
+          "id": "dev-007",
+          "category": "negation",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "I am not excited about tomorrow. I am frightened that everything will go wrong.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "joy",
+            "fear"
+          ],
+          "seconds": 0.0008282000017061364,
+          "scores": {
+            "anger": 0.044027777136799784,
+            "fear": 0.46085544946546736,
+            "joy": 0.39773830755071077,
+            "love": 0.047640145374436504,
+            "sadness": 0.03180808887235597,
+            "surprise": 0.017930231600229753
+          }
+        },
+        {
+          "id": "dev-008",
+          "category": "journal",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "The presentation is tomorrow morning. I rehearsed twice and packed my bag, but my hands are still shaking. I keep imagining that I will forget everything and embarrass myself in front of the room.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "uncertain",
+          "top_label": "joy",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "uncertain",
+            "uncertain",
+            "joy"
+          ],
+          "seconds": 0.0009266000015486497,
+          "scores": {
+            "anger": 0.10357459161168502,
+            "fear": 0.1428530791605433,
+            "joy": 0.3111513729066418,
+            "love": 0.1665062787465513,
+            "sadness": 0.199123638658093,
+            "surprise": 0.0767910389164856
+          }
+        },
+        {
+          "id": "dev-009",
+          "category": "direct",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I feel delighted and proud after finishing my first project.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.001847999999881722,
+          "scores": {
+            "anger": 0.0063327349345751295,
+            "fear": 0.004512496530074257,
+            "joy": 0.965982015196082,
+            "love": 0.007144212173499794,
+            "sadness": 0.011883951924372988,
+            "surprise": 0.0041445892413958215
+          }
+        },
+        {
+          "id": "dev-010",
+          "category": "direct",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "We won the match and I cannot stop smiling.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "uncertain",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "uncertain"
+          ],
+          "seconds": 0.0008982999970612582,
+          "scores": {
+            "anger": 0.2765267583618199,
+            "fear": 0.21877508154619227,
+            "joy": 0.32216595947416243,
+            "love": 0.04374467279664092,
+            "sadness": 0.10694844791824674,
+            "surprise": 0.03183907990293784
+          }
+        },
+        {
+          "id": "dev-011",
+          "category": "negation",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I am not miserable anymore. Today I feel cheerful and hopeful.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness",
+            "joy"
+          ],
+          "seconds": 0.0007813000011083204,
+          "scores": {
+            "anger": 0.03274875027870329,
+            "fear": 0.01950192268415069,
+            "joy": 0.44631591675330723,
+            "love": 0.009955104203336902,
+            "sadness": 0.4864512686377562,
+            "surprise": 0.005027037442745798
+          }
+        },
+        {
+          "id": "dev-012",
+          "category": "journal",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I finally submitted the assignment that had taken weeks. My friends came over and we cooked dinner together. I laughed so much tonight, and I went to bed feeling genuinely happy about the day.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy",
+            "anger",
+            "joy"
+          ],
+          "seconds": 0.0009060999982466456,
+          "scores": {
+            "anger": 0.17500984701298591,
+            "fear": 0.0709391674515944,
+            "joy": 0.3874147136997159,
+            "love": 0.10151848424850902,
+            "sadness": 0.21933896898469138,
+            "surprise": 0.04577881860250343
+          }
+        },
+        {
+          "id": "dev-013",
+          "category": "direct",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "I feel deeply affectionate toward my partner.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "love",
+          "top_label": "love",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "love"
+          ],
+          "seconds": 0.0008170000000973232,
+          "scores": {
+            "anger": 0.06892680375995958,
+            "fear": 0.040574315834191806,
+            "joy": 0.09047075320748486,
+            "love": 0.6882067372995653,
+            "sadness": 0.0996811563813433,
+            "surprise": 0.012140233517455159
+          }
+        },
+        {
+          "id": "dev-014",
+          "category": "direct",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "Holding my daughter close filled me with tenderness.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "uncertain",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "uncertain"
+          ],
+          "seconds": 0.0008113000003504567,
+          "scores": {
+            "anger": 0.19269967393102577,
+            "fear": 0.10561494847654172,
+            "joy": 0.2574245444586015,
+            "love": 0.06544084104852003,
+            "sadness": 0.34213573734697883,
+            "surprise": 0.03668425473833207
+          }
+        },
+        {
+          "id": "dev-015",
+          "category": "negation",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "I do not resent my brother. I adore him and treasure our closeness.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "uncertain",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "uncertain",
+            "love"
+          ],
+          "seconds": 0.000828100000944687,
+          "scores": {
+            "anger": 0.17884648155172211,
+            "fear": 0.09168862127200002,
+            "joy": 0.2560209486935838,
+            "love": 0.2169516007585217,
+            "sadness": 0.22438209371617635,
+            "surprise": 0.032110254007996025
+          }
+        },
+        {
+          "id": "dev-016",
+          "category": "journal",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "Grandma called to ask whether I had eaten. We talked for an hour about small things. Thinking about how much she cares made me feel warm and connected, and I wanted to tell her how dearly I love her.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy",
+            "uncertain",
+            "joy"
+          ],
+          "seconds": 0.00091469999824767,
+          "scores": {
+            "anger": 0.13668178401004782,
+            "fear": 0.07845463022028049,
+            "joy": 0.3856837319451348,
+            "love": 0.12271516258943001,
+            "sadness": 0.21662761259072835,
+            "surprise": 0.059837078644378455
+          }
+        },
+        {
+          "id": "dev-017",
+          "category": "direct",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "I feel lonely and heartbroken after saying goodbye.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "sadness",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness"
+          ],
+          "seconds": 0.0007444000002578832,
+          "scores": {
+            "anger": 0.009058506232094412,
+            "fear": 0.005209021140347377,
+            "joy": 0.0096835469060584,
+            "love": 0.005023250654471039,
+            "sadness": 0.963664828522444,
+            "surprise": 0.007360846544584941
+          }
+        },
+        {
+          "id": "dev-018",
+          "category": "direct",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "Everything feels empty since my friend moved away.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "sadness",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness"
+          ],
+          "seconds": 0.0007528999994974583,
+          "scores": {
+            "anger": 0.11654205558789807,
+            "fear": 0.06570315275530793,
+            "joy": 0.10408360295860983,
+            "love": 0.02149670241526654,
+            "sadness": 0.6699265502692483,
+            "surprise": 0.022247936013669336
+          }
+        },
+        {
+          "id": "dev-019",
+          "category": "negation",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "I am not happy about leaving. I feel miserable and keep crying.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "joy",
+            "sadness"
+          ],
+          "seconds": 0.0009580000005371403,
+          "scores": {
+            "anger": 0.04489740086158507,
+            "fear": 0.050214841981471456,
+            "joy": 0.3394621542746871,
+            "love": 0.0190967450854008,
+            "sadness": 0.5336140575819608,
+            "surprise": 0.012714800214894684
+          }
+        },
+        {
+          "id": "dev-020",
+          "category": "journal",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "I saw an old photograph of our group at lunch. Everyone has moved to different cities now. The apartment felt very quiet tonight, and I missed them so much that I cried before going to sleep.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "uncertain",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "uncertain",
+            "sadness",
+            "sadness"
+          ],
+          "seconds": 0.0012500999982876237,
+          "scores": {
+            "anger": 0.22960700467644568,
+            "fear": 0.11106098688438726,
+            "joy": 0.2624943578077186,
+            "love": 0.06615526391991768,
+            "sadness": 0.2931149423576818,
+            "surprise": 0.03756744435384896
+          }
+        },
+        {
+          "id": "dev-021",
+          "category": "direct",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "I was astonished to discover a hidden room behind the bookcase.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "uncertain",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "uncertain"
+          ],
+          "seconds": 0.0019509000012476463,
+          "scores": {
+            "anger": 0.12889876963185545,
+            "fear": 0.3150014875441502,
+            "joy": 0.2691693226816935,
+            "love": 0.07569854038437543,
+            "sadness": 0.14058108614737128,
+            "surprise": 0.07065079361055422
+          }
+        },
+        {
+          "id": "dev-022",
+          "category": "direct",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "That completely unexpected announcement left me speechless.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.0012161000013293233,
+          "scores": {
+            "anger": 0.09606999052894244,
+            "fear": 0.09957071026528452,
+            "joy": 0.40388980088760995,
+            "love": 0.03596903301170915,
+            "sadness": 0.3175653224265982,
+            "surprise": 0.046935142879855854
+          }
+        },
+        {
+          "id": "dev-023",
+          "category": "negation",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "I was not expecting a visit at all. Seeing her at the door stunned me.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "surprise",
+          "top_label": "surprise",
+          "whole_entry_top_label": "surprise",
+          "passage_labels": [
+            "uncertain",
+            "surprise"
+          ],
+          "seconds": 0.0008158000018738676,
+          "scores": {
+            "anger": 0.19225433109696452,
+            "fear": 0.10880418877569856,
+            "joy": 0.09091075754242361,
+            "love": 0.049427066934949665,
+            "sadness": 0.18142498706569077,
+            "surprise": 0.37717866858427285
+          }
+        },
+        {
+          "id": "dev-024",
+          "category": "journal",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "The morning followed its usual routine until an old classmate walked into the office. I had assumed he lived overseas. For a moment I could only stare because the coincidence was so unexpected.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "joy",
+            "sadness",
+            "uncertain"
+          ],
+          "seconds": 0.0008598999993409961,
+          "scores": {
+            "anger": 0.15385136974397629,
+            "fear": 0.11726440952494831,
+            "joy": 0.27781578529859097,
+            "love": 0.06430993389250093,
+            "sadness": 0.3608035201812581,
+            "surprise": 0.025954981358725256
+          }
+        },
+        {
+          "id": "dev-025",
+          "category": "negation",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "People think I am enjoying the party, but I am not. I feel painfully lonely.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "anger",
+            "sadness"
+          ],
+          "seconds": 0.0008158000018738676,
+          "scores": {
+            "anger": 0.20499494311869296,
+            "fear": 0.06655371260111385,
+            "joy": 0.10236031840599005,
+            "love": 0.029759673309540224,
+            "sadness": 0.5780190260886344,
+            "surprise": 0.018312326476028547
+          }
+        },
+        {
+          "id": "dev-026",
+          "category": "negation",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I thought I would be frightened, but I was not. I loved the ride and felt exhilarated.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "fear",
+            "love"
+          ],
+          "seconds": 0.0008323000001837499,
+          "scores": {
+            "anger": 0.04223372222806404,
+            "fear": 0.49780553881885603,
+            "joy": 0.07127900877476721,
+            "love": 0.29375539070556134,
+            "sadness": 0.07375565520447436,
+            "surprise": 0.021170684268277052
+          }
+        },
+        {
+          "id": "dev-027",
+          "category": "negation",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "There is nothing comforting about the message. I am anxious about what happens next.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "fear",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "uncertain",
+            "fear"
+          ],
+          "seconds": 0.0008726999985810835,
+          "scores": {
+            "anger": 0.048453638209671426,
+            "fear": 0.5427948915193631,
+            "joy": 0.14459042255930127,
+            "love": 0.1081198566722462,
+            "sadness": 0.12993895170950792,
+            "surprise": 0.026102239329910067
+          }
+        },
+        {
+          "id": "dev-028",
+          "category": "negation",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I do not find the joke funny. I feel offended and furious.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "surprise",
+            "anger"
+          ],
+          "seconds": 0.0008225000019592699,
+          "scores": {
+            "anger": 0.50308382792507,
+            "fear": 0.0036278067792839346,
+            "joy": 0.0058931565942586485,
+            "love": 0.0016298743301605312,
+            "sadness": 0.006312044360787202,
+            "surprise": 0.47945329001043957
+          }
+        },
+        {
+          "id": "dev-029",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "I took the bus at eight, attended two classes, and bought rice on the way home.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.0009681000010459684,
+          "scores": {
+            "anger": 0.18935264229110255,
+            "fear": 0.09756568406863529,
+            "joy": 0.46069288625645255,
+            "love": 0.09489412373478001,
+            "sadness": 0.12971486829825224,
+            "surprise": 0.027779795350777334
+          }
+        },
+        {
+          "id": "dev-030",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "The meeting is scheduled for Tuesday at three in room twelve.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "uncertain",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "uncertain"
+          ],
+          "seconds": 0.002235399999335641,
+          "scores": {
+            "anger": 0.15879972124971709,
+            "fear": 0.2228374933930995,
+            "joy": 0.34916495741845976,
+            "love": 0.10193377626548479,
+            "sadness": 0.12915223471616105,
+            "surprise": 0.038111816957077736
+          }
+        },
+        {
+          "id": "dev-031",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "I put the receipts in a folder and charged my phone.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.0011288999994576443,
+          "scores": {
+            "anger": 0.15114990149458674,
+            "fear": 0.24178322497466154,
+            "joy": 0.3663351045729644,
+            "love": 0.0546888497098174,
+            "sadness": 0.15057863598995225,
+            "surprise": 0.035464283258017856
+          }
+        },
+        {
+          "id": "dev-032",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "Today I washed the dishes. Then I folded the laundry and checked the calendar.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy",
+            "uncertain"
+          ],
+          "seconds": 0.0008742000027268659,
+          "scores": {
+            "anger": 0.15942995336517102,
+            "fear": 0.09418017250187752,
+            "joy": 0.35180859978700973,
+            "love": 0.06252665092063427,
+            "sadness": 0.2878060596869215,
+            "surprise": 0.044248563738385885
+          }
+        },
+        {
+          "id": "dev-033",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "The notebook has eighty pages and a blue cover.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "uncertain",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "uncertain"
+          ],
+          "seconds": 0.0007775999984005466,
+          "scores": {
+            "anger": 0.08281442665049436,
+            "fear": 0.3046990909765707,
+            "joy": 0.27559448355076205,
+            "love": 0.1339281430629242,
+            "sadness": 0.1806000843977534,
+            "surprise": 0.02236377136149519
+          }
+        },
+        {
+          "id": "dev-034",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "Lunch was at one. The next lecture began at two and finished at three.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "uncertain",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "uncertain",
+            "uncertain"
+          ],
+          "seconds": 0.0007722999980614986,
+          "scores": {
+            "anger": 0.3004996240838584,
+            "fear": 0.15038684280964704,
+            "joy": 0.26467284820381765,
+            "love": 0.04887787852073494,
+            "sadness": 0.1463833389449595,
+            "surprise": 0.08917946743698255
+          }
+        },
+        {
+          "id": "dev-035",
+          "category": "mixed",
+          "expected_emotions": [
+            "fear",
+            "joy"
+          ],
+          "text": "I am frightened about the interview tomorrow. Tonight I feel delighted that my friends came to celebrate my birthday.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "fear",
+            "joy"
+          ],
+          "seconds": 0.0007912000000942498,
+          "scores": {
+            "anger": 0.12507065816687815,
+            "fear": 0.4761804438582988,
+            "joy": 0.20844921242783818,
+            "love": 0.06043648443923913,
+            "sadness": 0.10104253808588735,
+            "surprise": 0.02882066302185824
+          }
+        },
+        {
+          "id": "dev-036",
+          "category": "mixed",
+          "expected_emotions": [
+            "anger",
+            "love"
+          ],
+          "text": "I am furious about the unfair decision at work. Holding my child tonight filled me with tenderness and love.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "anger",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger",
+            "uncertain"
+          ],
+          "seconds": 0.0008815000001050066,
+          "scores": {
+            "anger": 0.47685031792299604,
+            "fear": 0.08646633750512225,
+            "joy": 0.15193908714229545,
+            "love": 0.08980406069606035,
+            "sadness": 0.13336817296583342,
+            "surprise": 0.06157202376769259
+          }
+        },
+        {
+          "id": "dev-037",
+          "category": "mixed",
+          "expected_emotions": [
+            "sadness",
+            "joy"
+          ],
+          "text": "I cried because I miss my old friends. Later I felt thrilled when I learned that I passed the exam.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness",
+            "joy"
+          ],
+          "seconds": 0.0007688999976380728,
+          "scores": {
+            "anger": 0.1562577016470231,
+            "fear": 0.2028676173488489,
+            "joy": 0.23374585389737612,
+            "love": 0.07251922024246676,
+            "sadness": 0.3060988496349919,
+            "surprise": 0.028510757229293214
+          }
+        },
+        {
+          "id": "dev-038",
+          "category": "mixed",
+          "expected_emotions": [
+            "surprise",
+            "fear"
+          ],
+          "text": "The unexpected invitation left me astonished. Now I feel terrified about travelling alone.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "joy",
+            "fear"
+          ],
+          "seconds": 0.0007914000016171485,
+          "scores": {
+            "anger": 0.0463480857351939,
+            "fear": 0.578359521259926,
+            "joy": 0.22460251243956897,
+            "love": 0.01913126213499278,
+            "sadness": 0.11233321944929922,
+            "surprise": 0.019225398981019274
+          }
+        },
+        {
+          "id": "dev-039",
+          "category": "mixed",
+          "expected_emotions": [
+            "love",
+            "sadness"
+          ],
+          "text": "I feel deeply loved when my partner holds my hand. I also feel heartbroken about our upcoming separation.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "love",
+            "sadness"
+          ],
+          "seconds": 0.000893300002644537,
+          "scores": {
+            "anger": 0.05341793881687061,
+            "fear": 0.061539091780698066,
+            "joy": 0.09539237537274543,
+            "love": 0.2474638123531877,
+            "sadness": 0.5236601475618435,
+            "surprise": 0.018526634114654588
+          }
+        },
+        {
+          "id": "dev-040",
+          "category": "mixed",
+          "expected_emotions": [
+            "anger",
+            "joy"
+          ],
+          "text": "The rude comment made me furious this morning. Winning our match this evening made me incredibly happy.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger",
+            "joy"
+          ],
+          "seconds": 0.0008172999987436924,
+          "scores": {
+            "anger": 0.5393004217958761,
+            "fear": 0.009409854836250632,
+            "joy": 0.3918493247229026,
+            "love": 0.009930696014979633,
+            "sadness": 0.040484449402429845,
+            "surprise": 0.009025253227561246
+          }
+        },
+        {
+          "id": "dev-long",
+          "category": "long",
+          "expected_emotions": [
+            "sadness",
+            "joy"
+          ],
+          "text": "I feel heartbroken and lonely. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. Tonight I feel delighted and excited about my achievement.",
+          "source": "AI-authored artificial length stress test",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "sadness",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "uncertain",
+            "joy"
+          ],
+          "seconds": 0.0034726999983831774,
+          "scores": {
+            "anger": 0.20919668880747003,
+            "fear": 0.14580934770539455,
+            "joy": 0.2814753459333885,
+            "love": 0.08388373201274847,
+            "sadness": 0.24311181854307248,
+            "surprise": 0.036523066997926006
+          }
+        }
+      ]
+    },
+    "distilbert": {
+      "version": "distilbert-partial-epoch1-v1",
+      "benchmark_validation_macro_f1": 0.8240705246301737,
+      "benchmark_test_accuracy": 0.8435,
+      "benchmark_test_macro_f1": 0.7854304845629175,
+      "development_single_label_count": 28,
+      "development_chunked_macro_f1": 0.8162578162578162,
+      "development_whole_macro_f1": 0.9333333333333332,
+      "neutral_abstained": 0,
+      "neutral_count": 6,
+      "mixed_both_detected": 6,
+      "mixed_count": 6,
+      "median_journal_latency_ms": 42.80849999850034,
+      "cases": [
+        {
+          "id": "dev-001",
+          "category": "direct",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I am furious that my colleague took credit for my work.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "anger",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger"
+          ],
+          "seconds": 0.04241820000243024,
+          "scores": {
+            "anger": 0.9668589234352112,
+            "fear": 0.004602180793881416,
+            "joy": 0.009682651609182358,
+            "love": 0.0031509085092693567,
+            "sadness": 0.012504782527685165,
+            "surprise": 0.0032005892135202885
+          }
+        },
+        {
+          "id": "dev-002",
+          "category": "direct",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "Being interrupted again left me irritated and resentful.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "anger",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger"
+          ],
+          "seconds": 0.050159599999460625,
+          "scores": {
+            "anger": 0.9768002033233643,
+            "fear": 0.0021690507419407368,
+            "joy": 0.004748792387545109,
+            "love": 0.005138713400810957,
+            "sadness": 0.009525910019874573,
+            "surprise": 0.0016173989279195666
+          }
+        },
+        {
+          "id": "dev-003",
+          "category": "negation",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I am not scared of him. I am angry that he lied to me.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "fear",
+            "anger"
+          ],
+          "seconds": 0.04660130000047502,
+          "scores": {
+            "anger": 0.47308337688446045,
+            "fear": 0.4676779508590698,
+            "joy": 0.016170188784599304,
+            "love": 0.005543800070881844,
+            "sadness": 0.032151855528354645,
+            "surprise": 0.0053728679195046425
+          }
+        },
+        {
+          "id": "dev-004",
+          "category": "journal",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I spent the afternoon fixing a mistake that was not mine. When the manager blamed me in front of everyone, I wanted to shout. Even after getting home I was still furious about how unfair it was.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "sadness",
+            "sadness",
+            "anger"
+          ],
+          "seconds": 0.08340440000029048,
+          "scores": {
+            "anger": 0.42509910464286804,
+            "fear": 0.017157740890979767,
+            "joy": 0.030278703197836876,
+            "love": 0.005594667047262192,
+            "sadness": 0.5166664719581604,
+            "surprise": 0.005203339736908674
+          }
+        },
+        {
+          "id": "dev-005",
+          "category": "direct",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "I am terrified about what the test results might show.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "fear",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "fear"
+          ],
+          "seconds": 0.0385126000001037,
+          "scores": {
+            "anger": 0.0073838066309690475,
+            "fear": 0.9632605910301208,
+            "joy": 0.005610328167676926,
+            "love": 0.002466732170432806,
+            "sadness": 0.004647279158234596,
+            "surprise": 0.01663123443722725
+          }
+        },
+        {
+          "id": "dev-006",
+          "category": "direct",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "Every unfamiliar noise tonight makes me nervous.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "fear",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "fear"
+          ],
+          "seconds": 0.03547440000329516,
+          "scores": {
+            "anger": 0.008129754103720188,
+            "fear": 0.9652130603790283,
+            "joy": 0.007249235641211271,
+            "love": 0.0022206970024853945,
+            "sadness": 0.00499914214015007,
+            "surprise": 0.012188124470412731
+          }
+        },
+        {
+          "id": "dev-007",
+          "category": "negation",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "I am not excited about tomorrow. I am frightened that everything will go wrong.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "joy",
+            "fear"
+          ],
+          "seconds": 0.050454799998988165,
+          "scores": {
+            "anger": 0.007835515774786472,
+            "fear": 0.4900866150856018,
+            "joy": 0.485712468624115,
+            "love": 0.003363720141351223,
+            "sadness": 0.004966599866747856,
+            "surprise": 0.00803492870181799
+          }
+        },
+        {
+          "id": "dev-008",
+          "category": "journal",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "The presentation is tomorrow morning. I rehearsed twice and packed my bag, but my hands are still shaking. I keep imagining that I will forget everything and embarrass myself in front of the room.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "joy",
+            "fear",
+            "anger"
+          ],
+          "seconds": 0.10704360000090674,
+          "scores": {
+            "anger": 0.2584129869937897,
+            "fear": 0.3254520297050476,
+            "joy": 0.2741301953792572,
+            "love": 0.009687175042927265,
+            "sadness": 0.12385421246290207,
+            "surprise": 0.008463372476398945
+          }
+        },
+        {
+          "id": "dev-009",
+          "category": "direct",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I feel delighted and proud after finishing my first project.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.043907700001000194,
+          "scores": {
+            "anger": 0.002216657856479287,
+            "fear": 0.0014074125792831182,
+            "joy": 0.9831478595733643,
+            "love": 0.0071205440908670425,
+            "sadness": 0.00150239747017622,
+            "surprise": 0.004605138208717108
+          }
+        },
+        {
+          "id": "dev-010",
+          "category": "direct",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "We won the match and I cannot stop smiling.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.03204589999950258,
+          "scores": {
+            "anger": 0.004631567280739546,
+            "fear": 0.0029701567254960537,
+            "joy": 0.9716097116470337,
+            "love": 0.010814540088176727,
+            "sadness": 0.006975011434406042,
+            "surprise": 0.0029990312177687883
+          }
+        },
+        {
+          "id": "dev-011",
+          "category": "negation",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I am not miserable anymore. Today I feel cheerful and hopeful.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "sadness",
+            "joy"
+          ],
+          "seconds": 0.03342029999839724,
+          "scores": {
+            "anger": 0.006627384573221207,
+            "fear": 0.001850856002420187,
+            "joy": 0.4958036243915558,
+            "love": 0.00549909844994545,
+            "sadness": 0.4893375039100647,
+            "surprise": 0.000881575106177479
+          }
+        },
+        {
+          "id": "dev-012",
+          "category": "journal",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I finally submitted the assignment that had taken weeks. My friends came over and we cooked dinner together. I laughed so much tonight, and I went to bed feeling genuinely happy about the day.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "sadness",
+            "joy",
+            "joy"
+          ],
+          "seconds": 0.08335939999960829,
+          "scores": {
+            "anger": 0.05417934060096741,
+            "fear": 0.02849881909787655,
+            "joy": 0.7294228672981262,
+            "love": 0.02550542540848255,
+            "sadness": 0.15646232664585114,
+            "surprise": 0.005931215360760689
+          }
+        },
+        {
+          "id": "dev-013",
+          "category": "direct",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "I feel deeply affectionate toward my partner.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "love",
+          "top_label": "love",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "love"
+          ],
+          "seconds": 0.027893500002392102,
+          "scores": {
+            "anger": 0.007746771909296513,
+            "fear": 0.0036252245772629976,
+            "joy": 0.05279644951224327,
+            "love": 0.922391951084137,
+            "sadness": 0.007774184923619032,
+            "surprise": 0.005665386561304331
+          }
+        },
+        {
+          "id": "dev-014",
+          "category": "direct",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "Holding my daughter close filled me with tenderness.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "love",
+          "top_label": "love",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "love"
+          ],
+          "seconds": 0.023439299999154173,
+          "scores": {
+            "anger": 0.006170052569359541,
+            "fear": 0.008249123580753803,
+            "joy": 0.03636451065540314,
+            "love": 0.9271997809410095,
+            "sadness": 0.013706705532968044,
+            "surprise": 0.008309783414006233
+          }
+        },
+        {
+          "id": "dev-015",
+          "category": "negation",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "I do not resent my brother. I adore him and treasure our closeness.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "love",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "anger",
+            "love"
+          ],
+          "seconds": 0.04079449999699136,
+          "scores": {
+            "anger": 0.4111239016056061,
+            "fear": 0.0041010440327227116,
+            "joy": 0.11453211307525635,
+            "love": 0.4144776165485382,
+            "sadness": 0.0508435033261776,
+            "surprise": 0.00492178974673152
+          }
+        },
+        {
+          "id": "dev-016",
+          "category": "journal",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "Grandma called to ask whether I had eaten. We talked for an hour about small things. Thinking about how much she cares made me feel warm and connected, and I wanted to tell her how dearly I love her.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "joy",
+            "joy",
+            "love"
+          ],
+          "seconds": 0.10896090000096592,
+          "scores": {
+            "anger": 0.051209013909101486,
+            "fear": 0.017384611070156097,
+            "joy": 0.5703958868980408,
+            "love": 0.23561108112335205,
+            "sadness": 0.1145457997918129,
+            "surprise": 0.010853664018213749
+          }
+        },
+        {
+          "id": "dev-017",
+          "category": "direct",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "I feel lonely and heartbroken after saying goodbye.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "sadness",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness"
+          ],
+          "seconds": 0.02971620000244002,
+          "scores": {
+            "anger": 0.004090135917067528,
+            "fear": 0.004393022507429123,
+            "joy": 0.0034024743363261223,
+            "love": 0.0064650122076272964,
+            "sadness": 0.9806123375892639,
+            "surprise": 0.0010370406089350581
+          }
+        },
+        {
+          "id": "dev-018",
+          "category": "direct",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "Everything feels empty since my friend moved away.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "sadness",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness"
+          ],
+          "seconds": 0.02608400000099209,
+          "scores": {
+            "anger": 0.003182686399668455,
+            "fear": 0.0026051958557218313,
+            "joy": 0.005671425722539425,
+            "love": 0.0022894807625561953,
+            "sadness": 0.9852073192596436,
+            "surprise": 0.0010438661556690931
+          }
+        },
+        {
+          "id": "dev-019",
+          "category": "negation",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "I am not happy about leaving. I feel miserable and keep crying.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "joy",
+            "sadness"
+          ],
+          "seconds": 0.036866999998892425,
+          "scores": {
+            "anger": 0.03320920467376709,
+            "fear": 0.004260889254510403,
+            "joy": 0.394770085811615,
+            "love": 0.008831838145852089,
+            "sadness": 0.5575392246246338,
+            "surprise": 0.0013887376990169287
+          }
+        },
+        {
+          "id": "dev-020",
+          "category": "journal",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "I saw an old photograph of our group at lunch. Everyone has moved to different cities now. The apartment felt very quiet tonight, and I missed them so much that I cried before going to sleep.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness",
+            "joy",
+            "sadness"
+          ],
+          "seconds": 0.08867610000015702,
+          "scores": {
+            "anger": 0.07597377896308899,
+            "fear": 0.06941378861665726,
+            "joy": 0.24882428348064423,
+            "love": 0.025237880647182465,
+            "sadness": 0.5647669434547424,
+            "surprise": 0.015783317387104034
+          }
+        },
+        {
+          "id": "dev-021",
+          "category": "direct",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "I was astonished to discover a hidden room behind the bookcase.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "surprise",
+          "top_label": "surprise",
+          "whole_entry_top_label": "surprise",
+          "passage_labels": [
+            "surprise"
+          ],
+          "seconds": 0.032042100003309315,
+          "scores": {
+            "anger": 0.013055401854217052,
+            "fear": 0.059831514954566956,
+            "joy": 0.03739040344953537,
+            "love": 0.010623627342283726,
+            "sadness": 0.011724771000444889,
+            "surprise": 0.8673742413520813
+          }
+        },
+        {
+          "id": "dev-022",
+          "category": "direct",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "That completely unexpected announcement left me speechless.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "surprise",
+          "top_label": "surprise",
+          "whole_entry_top_label": "surprise",
+          "passage_labels": [
+            "surprise"
+          ],
+          "seconds": 0.026241000003210502,
+          "scores": {
+            "anger": 0.020473388954997063,
+            "fear": 0.17774078249931335,
+            "joy": 0.027861615642905235,
+            "love": 0.009731501340866089,
+            "sadness": 0.032889604568481445,
+            "surprise": 0.7313031554222107
+          }
+        },
+        {
+          "id": "dev-023",
+          "category": "negation",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "I was not expecting a visit at all. Seeing her at the door stunned me.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "surprise",
+          "passage_labels": [
+            "joy",
+            "surprise"
+          ],
+          "seconds": 0.03930020000188961,
+          "scores": {
+            "anger": 0.043226711452007294,
+            "fear": 0.17003455758094788,
+            "joy": 0.3645457327365875,
+            "love": 0.014968800358474255,
+            "sadness": 0.06825994700193405,
+            "surprise": 0.3389642834663391
+          }
+        },
+        {
+          "id": "dev-024",
+          "category": "journal",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "The morning followed its usual routine until an old classmate walked into the office. I had assumed he lived overseas. For a moment I could only stare because the coincidence was so unexpected.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "surprise",
+          "passage_labels": [
+            "joy",
+            "sadness",
+            "surprise"
+          ],
+          "seconds": 0.07564099999945029,
+          "scores": {
+            "anger": 0.07929349690675735,
+            "fear": 0.1268785148859024,
+            "joy": 0.3279906213283539,
+            "love": 0.018413083627820015,
+            "sadness": 0.2281426042318344,
+            "surprise": 0.21928167343139648
+          }
+        },
+        {
+          "id": "dev-025",
+          "category": "negation",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "People think I am enjoying the party, but I am not. I feel painfully lonely.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "joy",
+            "sadness"
+          ],
+          "seconds": 0.049583699998038355,
+          "scores": {
+            "anger": 0.006010525394231081,
+            "fear": 0.0032971827313303947,
+            "joy": 0.45613858103752136,
+            "love": 0.039122071117162704,
+            "sadness": 0.4934920370578766,
+            "surprise": 0.001939595676958561
+          }
+        },
+        {
+          "id": "dev-026",
+          "category": "negation",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I thought I would be frightened, but I was not. I loved the ride and felt exhilarated.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "fear",
+            "joy"
+          ],
+          "seconds": 0.04434590000164462,
+          "scores": {
+            "anger": 0.005105149932205677,
+            "fear": 0.48588964343070984,
+            "joy": 0.4826245903968811,
+            "love": 0.005964014679193497,
+            "sadness": 0.005048864986747503,
+            "surprise": 0.01536766067147255
+          }
+        },
+        {
+          "id": "dev-027",
+          "category": "negation",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "There is nothing comforting about the message. I am anxious about what happens next.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "love",
+            "fear"
+          ],
+          "seconds": 0.038437300001533004,
+          "scores": {
+            "anger": 0.06558133661746979,
+            "fear": 0.39224162697792053,
+            "joy": 0.12526938319206238,
+            "love": 0.3814174234867096,
+            "sadness": 0.0243099182844162,
+            "surprise": 0.011180298402905464
+          }
+        },
+        {
+          "id": "dev-028",
+          "category": "negation",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I do not find the joke funny. I feel offended and furious.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "joy",
+            "anger"
+          ],
+          "seconds": 0.041661999999632826,
+          "scores": {
+            "anger": 0.6565460562705994,
+            "fear": 0.018594244495034218,
+            "joy": 0.17848005890846252,
+            "love": 0.03984297066926956,
+            "sadness": 0.034873563796281815,
+            "surprise": 0.07166312634944916
+          }
+        },
+        {
+          "id": "dev-029",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "I took the bus at eight, attended two classes, and bought rice on the way home.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.04239189999861992,
+          "scores": {
+            "anger": 0.08869374543428421,
+            "fear": 0.02994198352098465,
+            "joy": 0.5618613362312317,
+            "love": 0.03745507076382637,
+            "sadness": 0.27255409955978394,
+            "surprise": 0.009493724443018436
+          }
+        },
+        {
+          "id": "dev-030",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "The meeting is scheduled for Tuesday at three in room twelve.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.03378589999920223,
+          "scores": {
+            "anger": 0.1820858120918274,
+            "fear": 0.09531184285879135,
+            "joy": 0.5182849764823914,
+            "love": 0.031364548951387405,
+            "sadness": 0.15913936495780945,
+            "surprise": 0.013813420198857784
+          }
+        },
+        {
+          "id": "dev-031",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "I put the receipts in a folder and charged my phone.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "anger",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger"
+          ],
+          "seconds": 0.03228999999919324,
+          "scores": {
+            "anger": 0.47492289543151855,
+            "fear": 0.08698145300149918,
+            "joy": 0.1812046319246292,
+            "love": 0.027106458321213722,
+            "sadness": 0.21189448237419128,
+            "surprise": 0.01789005473256111
+          }
+        },
+        {
+          "id": "dev-032",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "Today I washed the dishes. Then I folded the laundry and checked the calendar.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "sadness",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness",
+            "sadness"
+          ],
+          "seconds": 0.04313229999752366,
+          "scores": {
+            "anger": 0.13585472106933594,
+            "fear": 0.044193245470523834,
+            "joy": 0.3323093056678772,
+            "love": 0.031235400587320328,
+            "sadness": 0.44678381085395813,
+            "surprise": 0.009623540565371513
+          }
+        },
+        {
+          "id": "dev-033",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "The notebook has eighty pages and a blue cover.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.030821000000287313,
+          "scores": {
+            "anger": 0.04276366904377937,
+            "fear": 0.04473152384161949,
+            "joy": 0.7506295442581177,
+            "love": 0.04551905766129494,
+            "sadness": 0.09979154914617538,
+            "surprise": 0.01656472124159336
+          }
+        },
+        {
+          "id": "dev-034",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "Lunch was at one. The next lecture began at two and finished at three.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy",
+            "joy"
+          ],
+          "seconds": 0.04555579999941983,
+          "scores": {
+            "anger": 0.16209572553634644,
+            "fear": 0.04998207092285156,
+            "joy": 0.45463985204696655,
+            "love": 0.027407914400100708,
+            "sadness": 0.2882860004901886,
+            "surprise": 0.017588414251804352
+          }
+        },
+        {
+          "id": "dev-035",
+          "category": "mixed",
+          "expected_emotions": [
+            "fear",
+            "joy"
+          ],
+          "text": "I am frightened about the interview tomorrow. Tonight I feel delighted that my friends came to celebrate my birthday.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "fear",
+            "joy"
+          ],
+          "seconds": 0.07491850000224076,
+          "scores": {
+            "anger": 0.004066399298608303,
+            "fear": 0.4877796769142151,
+            "joy": 0.48863187432289124,
+            "love": 0.0058893258683383465,
+            "sadness": 0.0038651912473142147,
+            "surprise": 0.009767575189471245
+          }
+        },
+        {
+          "id": "dev-036",
+          "category": "mixed",
+          "expected_emotions": [
+            "anger",
+            "love"
+          ],
+          "text": "I am furious about the unfair decision at work. Holding my child tonight filled me with tenderness and love.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "anger",
+            "love"
+          ],
+          "seconds": 0.05122049999772571,
+          "scores": {
+            "anger": 0.4748876392841339,
+            "fear": 0.004227416589856148,
+            "joy": 0.033364519476890564,
+            "love": 0.45974594354629517,
+            "sadness": 0.022740494459867477,
+            "surprise": 0.005033939611166716
+          }
+        },
+        {
+          "id": "dev-037",
+          "category": "mixed",
+          "expected_emotions": [
+            "sadness",
+            "joy"
+          ],
+          "text": "I cried because I miss my old friends. Later I felt thrilled when I learned that I passed the exam.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "sadness",
+            "joy"
+          ],
+          "seconds": 0.052954399998270674,
+          "scores": {
+            "anger": 0.006518984213471413,
+            "fear": 0.004729282110929489,
+            "joy": 0.4706685543060303,
+            "love": 0.012533473782241344,
+            "sadness": 0.4871741533279419,
+            "surprise": 0.018375534564256668
+          }
+        },
+        {
+          "id": "dev-038",
+          "category": "mixed",
+          "expected_emotions": [
+            "surprise",
+            "fear"
+          ],
+          "text": "The unexpected invitation left me astonished. Now I feel terrified about travelling alone.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "surprise",
+            "fear"
+          ],
+          "seconds": 0.04626820000339649,
+          "scores": {
+            "anger": 0.010274435393512249,
+            "fear": 0.5458853244781494,
+            "joy": 0.009924232959747314,
+            "love": 0.005863324739038944,
+            "sadness": 0.00908818282186985,
+            "surprise": 0.4189645051956177
+          }
+        },
+        {
+          "id": "dev-039",
+          "category": "mixed",
+          "expected_emotions": [
+            "love",
+            "sadness"
+          ],
+          "text": "I feel deeply loved when my partner holds my hand. I also feel heartbroken about our upcoming separation.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "love",
+            "sadness"
+          ],
+          "seconds": 0.05176679999931366,
+          "scores": {
+            "anger": 0.004210143815726042,
+            "fear": 0.005900928284972906,
+            "joy": 0.038353998214006424,
+            "love": 0.4546532928943634,
+            "sadness": 0.49176305532455444,
+            "surprise": 0.005118623375892639
+          }
+        },
+        {
+          "id": "dev-040",
+          "category": "mixed",
+          "expected_emotions": [
+            "anger",
+            "joy"
+          ],
+          "text": "The rude comment made me furious this morning. Winning our match this evening made me incredibly happy.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger",
+            "joy"
+          ],
+          "seconds": 0.04280849999850034,
+          "scores": {
+            "anger": 0.4904997944831848,
+            "fear": 0.0023022133391350508,
+            "joy": 0.4959275424480438,
+            "love": 0.00440940773114562,
+            "sadness": 0.005054698325693607,
+            "surprise": 0.0018063423922285438
+          }
+        },
+        {
+          "id": "dev-long",
+          "category": "long",
+          "expected_emotions": [
+            "sadness",
+            "joy"
+          ],
+          "text": "I feel heartbroken and lonely. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. Tonight I feel delighted and excited about my achievement.",
+          "source": "AI-authored artificial length stress test",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "sadness",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy"
+          ],
+          "seconds": 0.6030162000024575,
+          "scores": {
+            "anger": 0.10173004120588303,
+            "fear": 0.06470082700252533,
+            "joy": 0.5430052280426025,
+            "love": 0.026578303426504135,
+            "sadness": 0.25390833616256714,
+            "surprise": 0.01007707230746746
+          }
+        }
+      ]
+    },
+    "distilbert_continued": {
+      "version": "distilbert-continued-v1-epoch3",
+      "benchmark_validation_macro_f1": 0.8883408800090232,
+      "benchmark_test_accuracy": 0.903,
+      "benchmark_test_macro_f1": 0.8636327784829413,
+      "development_single_label_count": 28,
+      "development_chunked_macro_f1": 0.7828282828282829,
+      "development_whole_macro_f1": 0.9663299663299663,
+      "neutral_abstained": 0,
+      "neutral_count": 6,
+      "mixed_both_detected": 6,
+      "mixed_count": 6,
+      "median_journal_latency_ms": 36.9697999994969,
+      "cases": [
+        {
+          "id": "dev-001",
+          "category": "direct",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I am furious that my colleague took credit for my work.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "anger",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger"
+          ],
+          "seconds": 0.028957500002434244,
+          "scores": {
+            "anger": 0.997648298740387,
+            "fear": 0.0004440809425432235,
+            "joy": 0.0008370023570023477,
+            "love": 0.00022437026200350374,
+            "sadness": 0.0007145277922973037,
+            "surprise": 0.00013165439304430038
+          }
+        },
+        {
+          "id": "dev-002",
+          "category": "direct",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "Being interrupted again left me irritated and resentful.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "anger",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger"
+          ],
+          "seconds": 0.02878640000199084,
+          "scores": {
+            "anger": 0.9981886744499207,
+            "fear": 0.00017778418259695172,
+            "joy": 0.0005746365059167147,
+            "love": 0.000667267944663763,
+            "sadness": 0.0003014621906913817,
+            "surprise": 9.016316471388564e-05
+          }
+        },
+        {
+          "id": "dev-003",
+          "category": "negation",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I am not scared of him. I am angry that he lied to me.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "fear",
+            "anger"
+          ],
+          "seconds": 0.042264600000635255,
+          "scores": {
+            "anger": 0.49616095423698425,
+            "fear": 0.49631962180137634,
+            "joy": 0.003952174913138151,
+            "love": 0.00031522917561233044,
+            "sadness": 0.0030603259801864624,
+            "surprise": 0.00019177579088136554
+          }
+        },
+        {
+          "id": "dev-004",
+          "category": "journal",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I spent the afternoon fixing a mistake that was not mine. When the manager blamed me in front of everyone, I wanted to shout. Even after getting home I was still furious about how unfair it was.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "sadness",
+            "sadness",
+            "anger"
+          ],
+          "seconds": 0.07094670000151382,
+          "scores": {
+            "anger": 0.35972094535827637,
+            "fear": 0.0017101527191698551,
+            "joy": 0.007261401042342186,
+            "love": 0.00038098703953437507,
+            "sadness": 0.630707323551178,
+            "surprise": 0.00021912636293563992
+          }
+        },
+        {
+          "id": "dev-005",
+          "category": "direct",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "I am terrified about what the test results might show.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "fear",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "fear"
+          ],
+          "seconds": 0.03172170000107144,
+          "scores": {
+            "anger": 0.0003875623515341431,
+            "fear": 0.9972923398017883,
+            "joy": 0.0008741593919694424,
+            "love": 0.00010257292160531506,
+            "sadness": 0.0001337914145551622,
+            "surprise": 0.001209564390592277
+          }
+        },
+        {
+          "id": "dev-006",
+          "category": "direct",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "Every unfamiliar noise tonight makes me nervous.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "fear",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "fear"
+          ],
+          "seconds": 0.02740569999878062,
+          "scores": {
+            "anger": 0.0004424366925377399,
+            "fear": 0.9979141354560852,
+            "joy": 0.0006306604482233524,
+            "love": 5.660772876581177e-05,
+            "sadness": 0.0002048559399554506,
+            "surprise": 0.0007513390737585723
+          }
+        },
+        {
+          "id": "dev-007",
+          "category": "negation",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "I am not excited about tomorrow. I am frightened that everything will go wrong.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "joy",
+            "fear"
+          ],
+          "seconds": 0.03459389999989071,
+          "scores": {
+            "anger": 0.00029824243392795324,
+            "fear": 0.4993997812271118,
+            "joy": 0.49948590993881226,
+            "love": 0.00013553674216382205,
+            "sadness": 0.0002714232250582427,
+            "surprise": 0.00040907543734647334
+          }
+        },
+        {
+          "id": "dev-008",
+          "category": "journal",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "The presentation is tomorrow morning. I rehearsed twice and packed my bag, but my hands are still shaking. I keep imagining that I will forget everything and embarrass myself in front of the room.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "joy",
+            "fear",
+            "sadness"
+          ],
+          "seconds": 0.07589219999863417,
+          "scores": {
+            "anger": 0.02463841252028942,
+            "fear": 0.34086641669273376,
+            "joy": 0.2990552484989166,
+            "love": 0.0017906263237819076,
+            "sadness": 0.3328639566898346,
+            "surprise": 0.0007853407296352088
+          }
+        },
+        {
+          "id": "dev-009",
+          "category": "direct",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I feel delighted and proud after finishing my first project.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.023840600002586143,
+          "scores": {
+            "anger": 6.204587407410145e-05,
+            "fear": 6.995545845711604e-05,
+            "joy": 0.9993477463722229,
+            "love": 0.00029751702095381916,
+            "sadness": 7.97532411525026e-05,
+            "surprise": 0.000143080746056512
+          }
+        },
+        {
+          "id": "dev-010",
+          "category": "direct",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "We won the match and I cannot stop smiling.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.022736700000677956,
+          "scores": {
+            "anger": 0.00016083971422631294,
+            "fear": 9.400540875503793e-05,
+            "joy": 0.9989643096923828,
+            "love": 0.0003054032858926803,
+            "sadness": 0.00042078300612047315,
+            "surprise": 5.464931746246293e-05
+          }
+        },
+        {
+          "id": "dev-011",
+          "category": "negation",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I am not miserable anymore. Today I feel cheerful and hopeful.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "sadness",
+            "joy"
+          ],
+          "seconds": 0.03226070000164327,
+          "scores": {
+            "anger": 0.00015178954345174134,
+            "fear": 4.9388261686544865e-05,
+            "joy": 0.4998185932636261,
+            "love": 0.00016549642896279693,
+            "sadness": 0.4998023509979248,
+            "surprise": 1.2373803656373639e-05
+          }
+        },
+        {
+          "id": "dev-012",
+          "category": "journal",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I finally submitted the assignment that had taken weeks. My friends came over and we cooked dinner together. I laughed so much tonight, and I went to bed feeling genuinely happy about the day.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy",
+            "joy",
+            "joy"
+          ],
+          "seconds": 0.07181309999941732,
+          "scores": {
+            "anger": 0.08722978085279465,
+            "fear": 0.043625425547361374,
+            "joy": 0.7765983939170837,
+            "love": 0.005032739136368036,
+            "sadness": 0.08633848279714584,
+            "surprise": 0.0011752588907256722
+          }
+        },
+        {
+          "id": "dev-013",
+          "category": "direct",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "I feel deeply affectionate toward my partner.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "love",
+          "top_label": "love",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "love"
+          ],
+          "seconds": 0.023940200000652112,
+          "scores": {
+            "anger": 0.0002273013087688014,
+            "fear": 0.0001330824161414057,
+            "joy": 0.006526656914502382,
+            "love": 0.9924597144126892,
+            "sadness": 0.00044133656774647534,
+            "surprise": 0.0002119022683473304
+          }
+        },
+        {
+          "id": "dev-014",
+          "category": "direct",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "Holding my daughter close filled me with tenderness.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "love",
+          "top_label": "love",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "love"
+          ],
+          "seconds": 0.02111709999735467,
+          "scores": {
+            "anger": 0.00029465660918504,
+            "fear": 0.0004136973002459854,
+            "joy": 0.011866001412272453,
+            "love": 0.9863155484199524,
+            "sadness": 0.0006253091851249337,
+            "surprise": 0.0004848161479458213
+          }
+        },
+        {
+          "id": "dev-015",
+          "category": "negation",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "I do not resent my brother. I adore him and treasure our closeness.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "anger",
+            "love"
+          ],
+          "seconds": 0.036208500001521315,
+          "scores": {
+            "anger": 0.4808662235736847,
+            "fear": 0.0003850567154586315,
+            "joy": 0.060912735760211945,
+            "love": 0.4505356550216675,
+            "sadness": 0.007001612801104784,
+            "surprise": 0.0002986095496453345
+          }
+        },
+        {
+          "id": "dev-016",
+          "category": "journal",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "Grandma called to ask whether I had eaten. We talked for an hour about small things. Thinking about how much she cares made me feel warm and connected, and I wanted to tell her how dearly I love her.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "joy",
+            "joy",
+            "love"
+          ],
+          "seconds": 0.08893999999781954,
+          "scores": {
+            "anger": 0.028476640582084656,
+            "fear": 0.006111130118370056,
+            "joy": 0.6110864877700806,
+            "love": 0.22361509501934052,
+            "sadness": 0.12874162197113037,
+            "surprise": 0.0019690615590661764
+          }
+        },
+        {
+          "id": "dev-017",
+          "category": "direct",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "I feel lonely and heartbroken after saying goodbye.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "sadness",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness"
+          ],
+          "seconds": 0.04131050000069081,
+          "scores": {
+            "anger": 0.00011746982636395842,
+            "fear": 9.075892739929259e-05,
+            "joy": 9.033881360664964e-05,
+            "love": 0.0005196256097406149,
+            "sadness": 0.9991627931594849,
+            "surprise": 1.903592055896297e-05
+          }
+        },
+        {
+          "id": "dev-018",
+          "category": "direct",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "Everything feels empty since my friend moved away.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "sadness",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness"
+          ],
+          "seconds": 0.03549610000118264,
+          "scores": {
+            "anger": 3.835070310742594e-05,
+            "fear": 3.915143679478206e-05,
+            "joy": 0.00015523136244155467,
+            "love": 5.036525544710457e-05,
+            "sadness": 0.9997013211250305,
+            "surprise": 1.5487299606320448e-05
+          }
+        },
+        {
+          "id": "dev-019",
+          "category": "negation",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "I am not happy about leaving. I feel miserable and keep crying.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "joy",
+            "sadness"
+          ],
+          "seconds": 0.03933369999867864,
+          "scores": {
+            "anger": 0.0005112015642225742,
+            "fear": 0.00012906391930300742,
+            "joy": 0.4931052029132843,
+            "love": 0.0002680430479813367,
+            "sadness": 0.5059624910354614,
+            "surprise": 2.39788005274022e-05
+          }
+        },
+        {
+          "id": "dev-020",
+          "category": "journal",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "I saw an old photograph of our group at lunch. Everyone has moved to different cities now. The apartment felt very quiet tonight, and I missed them so much that I cried before going to sleep.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "fear",
+            "joy",
+            "sadness"
+          ],
+          "seconds": 0.08824939999976777,
+          "scores": {
+            "anger": 0.11728933453559875,
+            "fear": 0.22381676733493805,
+            "joy": 0.17717598378658295,
+            "love": 0.006273194681853056,
+            "sadness": 0.4615488052368164,
+            "surprise": 0.013895943760871887
+          }
+        },
+        {
+          "id": "dev-021",
+          "category": "direct",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "I was astonished to discover a hidden room behind the bookcase.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "surprise",
+          "top_label": "surprise",
+          "whole_entry_top_label": "surprise",
+          "passage_labels": [
+            "surprise"
+          ],
+          "seconds": 0.030658899999252753,
+          "scores": {
+            "anger": 0.001521705067716539,
+            "fear": 0.014427116140723228,
+            "joy": 0.0165322944521904,
+            "love": 0.0006971339462324977,
+            "sadness": 0.001447488903068006,
+            "surprise": 0.965374231338501
+          }
+        },
+        {
+          "id": "dev-022",
+          "category": "direct",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "That completely unexpected announcement left me speechless.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "surprise",
+          "top_label": "surprise",
+          "whole_entry_top_label": "surprise",
+          "passage_labels": [
+            "surprise"
+          ],
+          "seconds": 0.02482570000211126,
+          "scores": {
+            "anger": 0.0026439386419951916,
+            "fear": 0.011350062675774097,
+            "joy": 0.010554731823503971,
+            "love": 0.0007651317864656448,
+            "sadness": 0.0042290594428777695,
+            "surprise": 0.970457136631012
+          }
+        },
+        {
+          "id": "dev-023",
+          "category": "negation",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "I was not expecting a visit at all. Seeing her at the door stunned me.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "surprise",
+          "whole_entry_top_label": "surprise",
+          "passage_labels": [
+            "joy",
+            "surprise"
+          ],
+          "seconds": 0.03735729999971227,
+          "scores": {
+            "anger": 0.02798665314912796,
+            "fear": 0.026206811890006065,
+            "joy": 0.4115872383117676,
+            "love": 0.0014133278746157885,
+            "sadness": 0.04441782832145691,
+            "surprise": 0.48838821053504944
+          }
+        },
+        {
+          "id": "dev-024",
+          "category": "journal",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "The morning followed its usual routine until an old classmate walked into the office. I had assumed he lived overseas. For a moment I could only stare because the coincidence was so unexpected.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "surprise",
+          "whole_entry_top_label": "surprise",
+          "passage_labels": [
+            "fear",
+            "sadness",
+            "surprise"
+          ],
+          "seconds": 0.07028889999855892,
+          "scores": {
+            "anger": 0.1547912210226059,
+            "fear": 0.17124627530574799,
+            "joy": 0.16145460307598114,
+            "love": 0.0026855471078306437,
+            "sadness": 0.23257696628570557,
+            "surprise": 0.2772454023361206
+          }
+        },
+        {
+          "id": "dev-025",
+          "category": "negation",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "People think I am enjoying the party, but I am not. I feel painfully lonely.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "joy",
+            "sadness"
+          ],
+          "seconds": 0.04330050000135088,
+          "scores": {
+            "anger": 0.0002839024527929723,
+            "fear": 9.554687130730599e-05,
+            "joy": 0.4877263605594635,
+            "love": 0.011894220486283302,
+            "sadness": 0.4999428689479828,
+            "surprise": 5.7059347454924136e-05
+          }
+        },
+        {
+          "id": "dev-026",
+          "category": "negation",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I thought I would be frightened, but I was not. I loved the ride and felt exhilarated.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "fear",
+            "joy"
+          ],
+          "seconds": 0.03602880000107689,
+          "scores": {
+            "anger": 0.0003563350182957947,
+            "fear": 0.4995386302471161,
+            "joy": 0.49456098675727844,
+            "love": 0.00033888136385940015,
+            "sadness": 0.0006093694246374071,
+            "surprise": 0.0045957728289067745
+          }
+        },
+        {
+          "id": "dev-027",
+          "category": "negation",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "There is nothing comforting about the message. I am anxious about what happens next.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy",
+            "fear"
+          ],
+          "seconds": 0.0369697999994969,
+          "scores": {
+            "anger": 0.006315361242741346,
+            "fear": 0.487860769033432,
+            "joy": 0.3586643934249878,
+            "love": 0.1433621346950531,
+            "sadness": 0.003147064708173275,
+            "surprise": 0.0006502955220639706
+          }
+        },
+        {
+          "id": "dev-028",
+          "category": "negation",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I do not find the joke funny. I feel offended and furious.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "surprise",
+            "anger"
+          ],
+          "seconds": 0.03139809999993304,
+          "scores": {
+            "anger": 0.5206577777862549,
+            "fear": 0.006192683707922697,
+            "joy": 0.09579820930957794,
+            "love": 0.002531324280425906,
+            "sadness": 0.0011119234841316938,
+            "surprise": 0.3737080991268158
+          }
+        },
+        {
+          "id": "dev-029",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "I took the bus at eight, attended two classes, and bought rice on the way home.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.029424399999697926,
+          "scores": {
+            "anger": 0.07489674538373947,
+            "fear": 0.030802125111222267,
+            "joy": 0.7691354155540466,
+            "love": 0.011392772197723389,
+            "sadness": 0.11135410517454147,
+            "surprise": 0.0024188326206058264
+          }
+        },
+        {
+          "id": "dev-030",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "The meeting is scheduled for Tuesday at three in room twelve.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.0403005000007397,
+          "scores": {
+            "anger": 0.2120324820280075,
+            "fear": 0.12279895693063736,
+            "joy": 0.6080060601234436,
+            "love": 0.009513740427792072,
+            "sadness": 0.04448739066720009,
+            "surprise": 0.003161345375701785
+          }
+        },
+        {
+          "id": "dev-031",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "I put the receipts in a folder and charged my phone.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "anger",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger"
+          ],
+          "seconds": 0.0328135999989172,
+          "scores": {
+            "anger": 0.833192765712738,
+            "fear": 0.0339372456073761,
+            "joy": 0.06699733436107635,
+            "love": 0.005854929331690073,
+            "sadness": 0.05619293078780174,
+            "surprise": 0.0038247902411967516
+          }
+        },
+        {
+          "id": "dev-032",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "Today I washed the dishes. Then I folded the laundry and checked the calendar.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness",
+            "joy"
+          ],
+          "seconds": 0.04465590000108932,
+          "scores": {
+            "anger": 0.18519151210784912,
+            "fear": 0.0709703341126442,
+            "joy": 0.28342217206954956,
+            "love": 0.007994753308594227,
+            "sadness": 0.45014411211013794,
+            "surprise": 0.0022771069779992104
+          }
+        },
+        {
+          "id": "dev-033",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "The notebook has eighty pages and a blue cover.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.028802700002415804,
+          "scores": {
+            "anger": 0.027117526158690453,
+            "fear": 0.02814960479736328,
+            "joy": 0.9186849594116211,
+            "love": 0.010570529848337173,
+            "sadness": 0.011902812868356705,
+            "surprise": 0.0035744740162044764
+          }
+        },
+        {
+          "id": "dev-034",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "Lunch was at one. The next lecture began at two and finished at three.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "anger",
+            "joy"
+          ],
+          "seconds": 0.04416499999933876,
+          "scores": {
+            "anger": 0.3648970425128937,
+            "fear": 0.10034079849720001,
+            "joy": 0.4064317047595978,
+            "love": 0.01245005801320076,
+            "sadness": 0.10583236068487167,
+            "surprise": 0.010048000141978264
+          }
+        },
+        {
+          "id": "dev-035",
+          "category": "mixed",
+          "expected_emotions": [
+            "fear",
+            "joy"
+          ],
+          "text": "I am frightened about the interview tomorrow. Tonight I feel delighted that my friends came to celebrate my birthday.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "fear",
+            "joy"
+          ],
+          "seconds": 0.04594319999887375,
+          "scores": {
+            "anger": 0.0001474388554925099,
+            "fear": 0.49934831261634827,
+            "joy": 0.4997960329055786,
+            "love": 0.00023802387295290828,
+            "sadness": 0.00016797739954199642,
+            "surprise": 0.0003023351891897619
+          }
+        },
+        {
+          "id": "dev-036",
+          "category": "mixed",
+          "expected_emotions": [
+            "anger",
+            "love"
+          ],
+          "text": "I am furious about the unfair decision at work. Holding my child tonight filled me with tenderness and love.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "anger",
+            "love"
+          ],
+          "seconds": 0.04698110000026645,
+          "scores": {
+            "anger": 0.49936971068382263,
+            "fear": 0.00029550158069469035,
+            "joy": 0.015433927066624165,
+            "love": 0.4840110242366791,
+            "sadness": 0.0004966699052602053,
+            "surprise": 0.00039318783092312515
+          }
+        },
+        {
+          "id": "dev-037",
+          "category": "mixed",
+          "expected_emotions": [
+            "sadness",
+            "joy"
+          ],
+          "text": "I cried because I miss my old friends. Later I felt thrilled when I learned that I passed the exam.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "sadness",
+            "joy"
+          ],
+          "seconds": 0.04258829999889713,
+          "scores": {
+            "anger": 0.00014678199659101665,
+            "fear": 0.0001803771883714944,
+            "joy": 0.4995471239089966,
+            "love": 0.0002191259991377592,
+            "sadness": 0.49968844652175903,
+            "surprise": 0.00021806071163155138
+          }
+        },
+        {
+          "id": "dev-038",
+          "category": "mixed",
+          "expected_emotions": [
+            "surprise",
+            "fear"
+          ],
+          "text": "The unexpected invitation left me astonished. Now I feel terrified about travelling alone.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "surprise",
+            "fear"
+          ],
+          "seconds": 0.037103599999682046,
+          "scores": {
+            "anger": 0.0005462233675643802,
+            "fear": 0.5029218196868896,
+            "joy": 0.0010821390897035599,
+            "love": 0.0003215659235138446,
+            "sadness": 0.000385213439585641,
+            "surprise": 0.49474307894706726
+          }
+        },
+        {
+          "id": "dev-039",
+          "category": "mixed",
+          "expected_emotions": [
+            "love",
+            "sadness"
+          ],
+          "text": "I feel deeply loved when my partner holds my hand. I also feel heartbroken about our upcoming separation.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "love",
+            "sadness"
+          ],
+          "seconds": 0.04324379999889061,
+          "scores": {
+            "anger": 0.00014614779502153397,
+            "fear": 0.0003368989273440093,
+            "joy": 0.002363435225561261,
+            "love": 0.4971386194229126,
+            "sadness": 0.49970537424087524,
+            "surprise": 0.00030954726389609277
+          }
+        },
+        {
+          "id": "dev-040",
+          "category": "mixed",
+          "expected_emotions": [
+            "anger",
+            "joy"
+          ],
+          "text": "The rude comment made me furious this morning. Winning our match this evening made me incredibly happy.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "anger",
+            "joy"
+          ],
+          "seconds": 0.036751199997524964,
+          "scores": {
+            "anger": 0.49971136450767517,
+            "fear": 0.0001236157404491678,
+            "joy": 0.499858558177948,
+            "love": 0.00011224955960642546,
+            "sadness": 0.0001415056176483631,
+            "surprise": 5.2680021326523274e-05
+          }
+        },
+        {
+          "id": "dev-long",
+          "category": "long",
+          "expected_emotions": [
+            "sadness",
+            "joy"
+          ],
+          "text": "I feel heartbroken and lonely. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. Tonight I feel delighted and excited about my achievement.",
+          "source": "AI-authored artificial length stress test",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "sadness",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy"
+          ],
+          "seconds": 0.4806140000000596,
+          "scores": {
+            "anger": 0.15914635360240936,
+            "fear": 0.11650504171848297,
+            "joy": 0.6012371778488159,
+            "love": 0.00980337429791689,
+            "sadness": 0.11076953262090683,
+            "surprise": 0.0025384449400007725
+          }
+        }
+      ]
+    },
+    "distilbert_experiment_2": {
+      "version": "distilbert-experiment-2",
+      "benchmark_validation_macro_f1": 0.8900993387664221,
+      "benchmark_test_accuracy": 0.915,
+      "benchmark_test_macro_f1": 0.8760508672797273,
+      "development_single_label_count": 28,
+      "development_chunked_macro_f1": 0.8110389610389609,
+      "development_whole_macro_f1": 0.8555555555555555,
+      "neutral_abstained": 0,
+      "neutral_count": 6,
+      "mixed_both_detected": 6,
+      "mixed_count": 6,
+      "median_journal_latency_ms": 35.96069999912288,
+      "cases": [
+        {
+          "id": "dev-001",
+          "category": "direct",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I am furious that my colleague took credit for my work.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "anger",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger"
+          ],
+          "seconds": 0.029005500000494067,
+          "scores": {
+            "anger": 0.9992468357086182,
+            "fear": 0.00021156109869480133,
+            "joy": 0.000283672969089821,
+            "love": 0.00010213065252173692,
+            "sadness": 0.00010596709762467071,
+            "surprise": 4.988232467439957e-05
+          }
+        },
+        {
+          "id": "dev-002",
+          "category": "direct",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "Being interrupted again left me irritated and resentful.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "anger",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger"
+          ],
+          "seconds": 0.025422099999559578,
+          "scores": {
+            "anger": 0.9990202188491821,
+            "fear": 9.52932532527484e-05,
+            "joy": 0.0003309901512693614,
+            "love": 0.00041552644688636065,
+            "sadness": 9.304647392127663e-05,
+            "surprise": 4.502094452618621e-05
+          }
+        },
+        {
+          "id": "dev-003",
+          "category": "negation",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I am not scared of him. I am angry that he lied to me.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "fear",
+            "anger"
+          ],
+          "seconds": 0.03999459999977262,
+          "scores": {
+            "anger": 0.499482661485672,
+            "fear": 0.4990946650505066,
+            "joy": 0.0008803349337540567,
+            "love": 9.200544445775449e-05,
+            "sadness": 0.00038555762148462236,
+            "surprise": 6.483134347945452e-05
+          }
+        },
+        {
+          "id": "dev-004",
+          "category": "journal",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I spent the afternoon fixing a mistake that was not mine. When the manager blamed me in front of everyone, I wanted to shout. Even after getting home I was still furious about how unfair it was.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "sadness",
+            "sadness",
+            "anger"
+          ],
+          "seconds": 0.061637399998289766,
+          "scores": {
+            "anger": 0.3647538721561432,
+            "fear": 0.0010899341432377696,
+            "joy": 0.006183397024869919,
+            "love": 0.00019468547543510795,
+            "sadness": 0.6276549100875854,
+            "surprise": 0.0001231930946232751
+          }
+        },
+        {
+          "id": "dev-005",
+          "category": "direct",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "I am terrified about what the test results might show.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "fear",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "fear"
+          ],
+          "seconds": 0.0275407000008272,
+          "scores": {
+            "anger": 0.00015266906120814383,
+            "fear": 0.9991698265075684,
+            "joy": 0.0003108902310486883,
+            "love": 3.45873340847902e-05,
+            "sadness": 3.898977593053132e-05,
+            "surprise": 0.0002930962073151022
+          }
+        },
+        {
+          "id": "dev-006",
+          "category": "direct",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "Every unfamiliar noise tonight makes me nervous.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "fear",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "fear"
+          ],
+          "seconds": 0.021693599999707658,
+          "scores": {
+            "anger": 0.00020322768250480294,
+            "fear": 0.9994307160377502,
+            "joy": 0.0001206884699058719,
+            "love": 1.903125667013228e-05,
+            "sadness": 5.085520024294965e-05,
+            "surprise": 0.00017536021186970174
+          }
+        },
+        {
+          "id": "dev-007",
+          "category": "negation",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "I am not excited about tomorrow. I am frightened that everything will go wrong.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "joy",
+            "fear"
+          ],
+          "seconds": 0.034982099998160265,
+          "scores": {
+            "anger": 0.00015876950055826455,
+            "fear": 0.4998777508735657,
+            "joy": 0.49970173835754395,
+            "love": 5.121745925862342e-05,
+            "sadness": 8.982516737887636e-05,
+            "surprise": 0.00012076064012944698
+          }
+        },
+        {
+          "id": "dev-008",
+          "category": "journal",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "The presentation is tomorrow morning. I rehearsed twice and packed my bag, but my hands are still shaking. I keep imagining that I will forget everything and embarrass myself in front of the room.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "joy",
+            "fear",
+            "sadness"
+          ],
+          "seconds": 0.07690820000061649,
+          "scores": {
+            "anger": 0.0189835038036108,
+            "fear": 0.33948591351509094,
+            "joy": 0.31045645475387573,
+            "love": 0.0007456850144080818,
+            "sadness": 0.3300887644290924,
+            "surprise": 0.00023959336976986378
+          }
+        },
+        {
+          "id": "dev-009",
+          "category": "direct",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I feel delighted and proud after finishing my first project.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.029779600001347717,
+          "scores": {
+            "anger": 2.396236413915176e-05,
+            "fear": 2.953250805148855e-05,
+            "joy": 0.9998440742492676,
+            "love": 5.383059396990575e-05,
+            "sadness": 2.629660775710363e-05,
+            "surprise": 2.218566987721715e-05
+          }
+        },
+        {
+          "id": "dev-010",
+          "category": "direct",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "We won the match and I cannot stop smiling.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.02396959999896353,
+          "scores": {
+            "anger": 4.662651917897165e-05,
+            "fear": 3.705289418576285e-05,
+            "joy": 0.9996976852416992,
+            "love": 8.054872887441888e-05,
+            "sadness": 0.0001235991803696379,
+            "surprise": 1.4569412996934261e-05
+          }
+        },
+        {
+          "id": "dev-011",
+          "category": "negation",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I am not miserable anymore. Today I feel cheerful and hopeful.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "sadness",
+            "joy"
+          ],
+          "seconds": 0.035884699998860015,
+          "scores": {
+            "anger": 7.194893987616524e-05,
+            "fear": 2.5589321012375876e-05,
+            "joy": 0.49998295307159424,
+            "love": 3.975415893364698e-05,
+            "sadness": 0.49987542629241943,
+            "surprise": 4.301807621232001e-06
+          }
+        },
+        {
+          "id": "dev-012",
+          "category": "journal",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I finally submitted the assignment that had taken weeks. My friends came over and we cooked dinner together. I laughed so much tonight, and I went to bed feeling genuinely happy about the day.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy",
+            "joy",
+            "joy"
+          ],
+          "seconds": 0.07458020000194665,
+          "scores": {
+            "anger": 0.08094610273838043,
+            "fear": 0.02831711433827877,
+            "joy": 0.845691978931427,
+            "love": 0.003192685777321458,
+            "sadness": 0.041386015713214874,
+            "surprise": 0.00046604228555224836
+          }
+        },
+        {
+          "id": "dev-013",
+          "category": "direct",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "I feel deeply affectionate toward my partner.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "love",
+          "top_label": "love",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "love"
+          ],
+          "seconds": 0.024882899997464847,
+          "scores": {
+            "anger": 0.00011496205115690827,
+            "fear": 5.297003735904582e-05,
+            "joy": 0.0019458186579868197,
+            "love": 0.9975711703300476,
+            "sadness": 0.00024277358897961676,
+            "surprise": 7.22973418305628e-05
+          }
+        },
+        {
+          "id": "dev-014",
+          "category": "direct",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "Holding my daughter close filled me with tenderness.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "love",
+          "top_label": "love",
+          "whole_entry_top_label": "love",
+          "passage_labels": [
+            "love"
+          ],
+          "seconds": 0.022623299999395385,
+          "scores": {
+            "anger": 0.00018764987180475146,
+            "fear": 0.0002455528301652521,
+            "joy": 0.00639808876439929,
+            "love": 0.992624819278717,
+            "sadness": 0.0003399971465114504,
+            "surprise": 0.0002038571983575821
+          }
+        },
+        {
+          "id": "dev-015",
+          "category": "negation",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "I do not resent my brother. I adore him and treasure our closeness.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "anger",
+            "love"
+          ],
+          "seconds": 0.036041700001078425,
+          "scores": {
+            "anger": 0.4910636246204376,
+            "fear": 0.00020421421504579484,
+            "joy": 0.0986044704914093,
+            "love": 0.4072960913181305,
+            "sadness": 0.002710153115913272,
+            "surprise": 0.00012139117461629212
+          }
+        },
+        {
+          "id": "dev-016",
+          "category": "journal",
+          "expected_emotions": [
+            "love"
+          ],
+          "text": "Grandma called to ask whether I had eaten. We talked for an hour about small things. Thinking about how much she cares made me feel warm and connected, and I wanted to tell her how dearly I love her.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy",
+            "joy",
+            "joy"
+          ],
+          "seconds": 0.09606889999849955,
+          "scores": {
+            "anger": 0.024956537410616875,
+            "fear": 0.00387035240419209,
+            "joy": 0.7179315686225891,
+            "love": 0.15835215151309967,
+            "sadness": 0.09389334172010422,
+            "surprise": 0.0009960312163457274
+          }
+        },
+        {
+          "id": "dev-017",
+          "category": "direct",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "I feel lonely and heartbroken after saying goodbye.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "sadness",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness"
+          ],
+          "seconds": 0.029857500001526205,
+          "scores": {
+            "anger": 2.6005247491411865e-05,
+            "fear": 1.8824428480002098e-05,
+            "joy": 2.4980994567158632e-05,
+            "love": 0.00010822591139003634,
+            "sadness": 0.9998175501823425,
+            "surprise": 4.441097189555876e-06
+          }
+        },
+        {
+          "id": "dev-018",
+          "category": "direct",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "Everything feels empty since my friend moved away.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "sadness",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness"
+          ],
+          "seconds": 0.024539099998946767,
+          "scores": {
+            "anger": 1.1002300198015291e-05,
+            "fear": 1.036471439874731e-05,
+            "joy": 6.0317506722640246e-05,
+            "love": 1.7762969946488738e-05,
+            "sadness": 0.9998959302902222,
+            "surprise": 4.6943191591708455e-06
+          }
+        },
+        {
+          "id": "dev-019",
+          "category": "negation",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "I am not happy about leaving. I feel miserable and keep crying.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "joy",
+            "sadness"
+          ],
+          "seconds": 0.02989549999983865,
+          "scores": {
+            "anger": 0.00014355081657413393,
+            "fear": 3.7209341826383024e-05,
+            "joy": 0.49869072437286377,
+            "love": 6.942548498045653e-05,
+            "sadness": 0.501052737236023,
+            "surprise": 6.336101250781212e-06
+          }
+        },
+        {
+          "id": "dev-020",
+          "category": "journal",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "I saw an old photograph of our group at lunch. Everyone has moved to different cities now. The apartment felt very quiet tonight, and I missed them so much that I cried before going to sleep.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "fear",
+            "joy",
+            "sadness"
+          ],
+          "seconds": 0.0789148000003479,
+          "scores": {
+            "anger": 0.11507227271795273,
+            "fear": 0.27778366208076477,
+            "joy": 0.1748240441083908,
+            "love": 0.003449927316978574,
+            "sadness": 0.41874852776527405,
+            "surprise": 0.010121607221662998
+          }
+        },
+        {
+          "id": "dev-021",
+          "category": "direct",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "I was astonished to discover a hidden room behind the bookcase.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "surprise",
+          "top_label": "surprise",
+          "whole_entry_top_label": "surprise",
+          "passage_labels": [
+            "surprise"
+          ],
+          "seconds": 0.033049800000299,
+          "scores": {
+            "anger": 0.002420795848593116,
+            "fear": 0.10103733092546463,
+            "joy": 0.047179725021123886,
+            "love": 0.0006082601030357182,
+            "sadness": 0.002139771357178688,
+            "surprise": 0.8466140627861023
+          }
+        },
+        {
+          "id": "dev-022",
+          "category": "direct",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "That completely unexpected announcement left me speechless.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "surprise",
+          "top_label": "surprise",
+          "whole_entry_top_label": "surprise",
+          "passage_labels": [
+            "surprise"
+          ],
+          "seconds": 0.023349099999904865,
+          "scores": {
+            "anger": 0.0017343233339488506,
+            "fear": 0.013339096680283546,
+            "joy": 0.010505898855626583,
+            "love": 0.00045953370863571763,
+            "sadness": 0.003642486408352852,
+            "surprise": 0.9703187346458435
+          }
+        },
+        {
+          "id": "dev-023",
+          "category": "negation",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "I was not expecting a visit at all. Seeing her at the door stunned me.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "surprise",
+          "whole_entry_top_label": "surprise",
+          "passage_labels": [
+            "joy",
+            "surprise"
+          ],
+          "seconds": 0.03526810000039404,
+          "scores": {
+            "anger": 0.01661326363682747,
+            "fear": 0.021576931700110435,
+            "joy": 0.4598742127418518,
+            "love": 0.0006934733246453106,
+            "sadness": 0.014557130634784698,
+            "surprise": 0.48668497800827026
+          }
+        },
+        {
+          "id": "dev-024",
+          "category": "journal",
+          "expected_emotions": [
+            "surprise"
+          ],
+          "text": "The morning followed its usual routine until an old classmate walked into the office. I had assumed he lived overseas. For a moment I could only stare because the coincidence was so unexpected.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "surprise",
+          "passage_labels": [
+            "fear",
+            "sadness",
+            "surprise"
+          ],
+          "seconds": 0.06569239999953425,
+          "scores": {
+            "anger": 0.16991817951202393,
+            "fear": 0.20078863203525543,
+            "joy": 0.11361084133386612,
+            "love": 0.0011173044331371784,
+            "sadness": 0.2688206136226654,
+            "surprise": 0.24574440717697144
+          }
+        },
+        {
+          "id": "dev-025",
+          "category": "negation",
+          "expected_emotions": [
+            "sadness"
+          ],
+          "text": "People think I am enjoying the party, but I am not. I feel painfully lonely.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "joy",
+            "sadness"
+          ],
+          "seconds": 0.04792739999902551,
+          "scores": {
+            "anger": 9.238954226020724e-05,
+            "fear": 2.581796252343338e-05,
+            "joy": 0.4985865652561188,
+            "love": 0.0013125616824254394,
+            "sadness": 0.49997255206108093,
+            "surprise": 1.0131685485248454e-05
+          }
+        },
+        {
+          "id": "dev-026",
+          "category": "negation",
+          "expected_emotions": [
+            "joy"
+          ],
+          "text": "I thought I would be frightened, but I was not. I loved the ride and felt exhilarated.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "fear",
+            "joy"
+          ],
+          "seconds": 0.040529800000513205,
+          "scores": {
+            "anger": 0.0001266113977180794,
+            "fear": 0.49987536668777466,
+            "joy": 0.4989236891269684,
+            "love": 7.688639016123489e-05,
+            "sadness": 0.0001793999399524182,
+            "surprise": 0.0008180452859960496
+          }
+        },
+        {
+          "id": "dev-027",
+          "category": "negation",
+          "expected_emotions": [
+            "fear"
+          ],
+          "text": "There is nothing comforting about the message. I am anxious about what happens next.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy",
+            "fear"
+          ],
+          "seconds": 0.03827869999804534,
+          "scores": {
+            "anger": 0.003779373364523053,
+            "fear": 0.4947284460067749,
+            "joy": 0.43478965759277344,
+            "love": 0.06495555490255356,
+            "sadness": 0.0015202440554276109,
+            "surprise": 0.0002266752562718466
+          }
+        },
+        {
+          "id": "dev-028",
+          "category": "negation",
+          "expected_emotions": [
+            "anger"
+          ],
+          "text": "I do not find the joke funny. I feel offended and furious.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "surprise",
+            "anger"
+          ],
+          "seconds": 0.032068799999251496,
+          "scores": {
+            "anger": 0.5415308475494385,
+            "fear": 0.006090001203119755,
+            "joy": 0.14107228815555573,
+            "love": 0.002172062871977687,
+            "sadness": 0.0007950171129778028,
+            "surprise": 0.30833980441093445
+          }
+        },
+        {
+          "id": "dev-029",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "I took the bus at eight, attended two classes, and bought rice on the way home.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.03944690000207629,
+          "scores": {
+            "anger": 0.04426727816462517,
+            "fear": 0.018722685053944588,
+            "joy": 0.8708124160766602,
+            "love": 0.0054207975044846535,
+            "sadness": 0.059944480657577515,
+            "surprise": 0.0008323740330524743
+          }
+        },
+        {
+          "id": "dev-030",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "The meeting is scheduled for Tuesday at three in room twelve.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.03856660000019474,
+          "scores": {
+            "anger": 0.20482952892780304,
+            "fear": 0.12539498507976532,
+            "joy": 0.6435416340827942,
+            "love": 0.005448815878480673,
+            "sadness": 0.01935734413564205,
+            "surprise": 0.0014277599984779954
+          }
+        },
+        {
+          "id": "dev-031",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "I put the receipts in a folder and charged my phone.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "anger",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger"
+          ],
+          "seconds": 0.02431530000103521,
+          "scores": {
+            "anger": 0.9211032390594482,
+            "fear": 0.018399247899651527,
+            "joy": 0.03592368960380554,
+            "love": 0.0025040172040462494,
+            "sadness": 0.02043018490076065,
+            "surprise": 0.00163965520914644
+          }
+        },
+        {
+          "id": "dev-032",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "Today I washed the dishes. Then I folded the laundry and checked the calendar.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "sadness",
+            "joy"
+          ],
+          "seconds": 0.03596069999912288,
+          "scores": {
+            "anger": 0.21373224258422852,
+            "fear": 0.07854325324296951,
+            "joy": 0.32357078790664673,
+            "love": 0.004750601015985012,
+            "sadness": 0.3782688081264496,
+            "surprise": 0.0011343088699504733
+          }
+        },
+        {
+          "id": "dev-033",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "The notebook has eighty pages and a blue cover.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "joy",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "joy"
+          ],
+          "seconds": 0.026860499998292653,
+          "scores": {
+            "anger": 0.011298580095171928,
+            "fear": 0.01648639142513275,
+            "joy": 0.9635916948318481,
+            "love": 0.0040131984278559685,
+            "sadness": 0.003624651348218322,
+            "surprise": 0.000985418097116053
+          }
+        },
+        {
+          "id": "dev-034",
+          "category": "neutral",
+          "expected_emotions": [],
+          "text": "Lunch was at one. The next lecture began at two and finished at three.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger",
+            "joy"
+          ],
+          "seconds": 0.03915870000128052,
+          "scores": {
+            "anger": 0.4361788034439087,
+            "fear": 0.08427050709724426,
+            "joy": 0.41795358061790466,
+            "love": 0.0059177326038479805,
+            "sadness": 0.050896674394607544,
+            "surprise": 0.004782667849212885
+          }
+        },
+        {
+          "id": "dev-035",
+          "category": "mixed",
+          "expected_emotions": [
+            "fear",
+            "joy"
+          ],
+          "text": "I am frightened about the interview tomorrow. Tonight I feel delighted that my friends came to celebrate my birthday.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "fear",
+            "joy"
+          ],
+          "seconds": 0.04210600000078557,
+          "scores": {
+            "anger": 6.201477663125843e-05,
+            "fear": 0.49978160858154297,
+            "joy": 0.4999749958515167,
+            "love": 5.0517788622528315e-05,
+            "sadness": 4.788974183611572e-05,
+            "surprise": 8.30718781799078e-05
+          }
+        },
+        {
+          "id": "dev-036",
+          "category": "mixed",
+          "expected_emotions": [
+            "anger",
+            "love"
+          ],
+          "text": "I am furious about the unfair decision at work. Holding my child tonight filled me with tenderness and love.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "anger",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "anger",
+            "love"
+          ],
+          "seconds": 0.037926699998934055,
+          "scores": {
+            "anger": 0.499786376953125,
+            "fear": 0.00020322305499576032,
+            "joy": 0.010567176155745983,
+            "love": 0.48907676339149475,
+            "sadness": 0.00017669794033281505,
+            "surprise": 0.0001898068585433066
+          }
+        },
+        {
+          "id": "dev-037",
+          "category": "mixed",
+          "expected_emotions": [
+            "sadness",
+            "joy"
+          ],
+          "text": "I cried because I miss my old friends. Later I felt thrilled when I learned that I passed the exam.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "sadness",
+            "joy"
+          ],
+          "seconds": 0.03894080000100075,
+          "scores": {
+            "anger": 5.4164389439392835e-05,
+            "fear": 8.15292150946334e-05,
+            "joy": 0.4999169707298279,
+            "love": 4.5811735617462546e-05,
+            "sadness": 0.4998743236064911,
+            "surprise": 2.7232201318838634e-05
+          }
+        },
+        {
+          "id": "dev-038",
+          "category": "mixed",
+          "expected_emotions": [
+            "surprise",
+            "fear"
+          ],
+          "text": "The unexpected invitation left me astonished. Now I feel terrified about travelling alone.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "fear",
+          "whole_entry_top_label": "fear",
+          "passage_labels": [
+            "surprise",
+            "fear"
+          ],
+          "seconds": 0.033070800000132294,
+          "scores": {
+            "anger": 0.00028640456730499864,
+            "fear": 0.5035462975502014,
+            "joy": 0.000537381914909929,
+            "love": 0.00017991791537497193,
+            "sadness": 0.000182729447260499,
+            "surprise": 0.49526724219322205
+          }
+        },
+        {
+          "id": "dev-039",
+          "category": "mixed",
+          "expected_emotions": [
+            "love",
+            "sadness"
+          ],
+          "text": "I feel deeply loved when my partner holds my hand. I also feel heartbroken about our upcoming separation.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "sadness",
+          "whole_entry_top_label": "sadness",
+          "passage_labels": [
+            "love",
+            "sadness"
+          ],
+          "seconds": 0.03767779999907361,
+          "scores": {
+            "anger": 5.406929994933307e-05,
+            "fear": 9.215786121785641e-05,
+            "joy": 0.0010267992038279772,
+            "love": 0.49880412220954895,
+            "sadness": 0.4999401867389679,
+            "surprise": 8.263923518825322e-05
+          }
+        },
+        {
+          "id": "dev-040",
+          "category": "mixed",
+          "expected_emotions": [
+            "anger",
+            "joy"
+          ],
+          "text": "The rude comment made me furious this morning. Winning our match this evening made me incredibly happy.",
+          "source": "AI-authored development fixture; labels require independent human review",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "joy",
+          "passage_labels": [
+            "anger",
+            "joy"
+          ],
+          "seconds": 0.03712169999926118,
+          "scores": {
+            "anger": 0.4998634457588196,
+            "fear": 7.13067056494765e-05,
+            "joy": 0.49995192885398865,
+            "love": 4.295612598070875e-05,
+            "sadness": 4.8903988499660045e-05,
+            "surprise": 2.1462587028509006e-05
+          }
+        },
+        {
+          "id": "dev-long",
+          "category": "long",
+          "expected_emotions": [
+            "sadness",
+            "joy"
+          ],
+          "text": "I feel heartbroken and lonely. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. I checked the timetable and wrote down the next appointment. Tonight I feel delighted and excited about my achievement.",
+          "source": "AI-authored artificial length stress test",
+          "prediction": "mixed",
+          "top_label": "joy",
+          "whole_entry_top_label": "anger",
+          "passage_labels": [
+            "sadness",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy",
+            "joy"
+          ],
+          "seconds": 0.47975229999792646,
+          "scores": {
+            "anger": 0.12230438739061356,
+            "fear": 0.1063159629702568,
+            "joy": 0.7063169479370117,
+            "love": 0.00487041100859642,
+            "sadness": 0.05933970957994461,
+            "surprise": 0.0008526447345502675
+          }
+        }
+      ]
+    }
+  },
+  "recommended_model": "distilbert_experiment_2",
+  "selection_rule": "Highest short-text validation macro-F1 among completed candidates. Deployment recommendation is provisional until independent journal evaluation."
+}

@@ -1,0 +1,57 @@
+{
+  "scope": "External event-text evaluation and AI-authored synthetic longitudinal stress test; not a human journal pilot.",
+  "models": {
+    "baseline": {
+      "external_passage_macro_f1": 0.3623466681430044,
+      "external_whole_macro_f1": 0.4129208198440419,
+      "external_count": 570,
+      "synthetic_neutral_abstained": 2,
+      "synthetic_neutral_count": 6,
+      "synthetic_mixed_exact": 0,
+      "synthetic_mixed_count": 8,
+      "observed_person_days": 28,
+      "daily_frequency_mae": 0.12202380952380952,
+      "changed_class_transitions": 40,
+      "changed_direction_accuracy": 0.275,
+      "unchanged_class_transitions": 92,
+      "unchanged_direction_accuracy": 0.8478260869565217
+    },
+    "distilbert_continued": {
+      "external_passage_macro_f1": 0.5624578149325274,
+      "external_whole_macro_f1": 0.5684414074153769,
+      "external_count": 570,
+      "synthetic_neutral_abstained": 1,
+      "synthetic_neutral_count": 6,
+      "synthetic_mixed_exact": 2,
+      "synthetic_mixed_count": 8,
+      "observed_person_days": 28,
+      "daily_frequency_mae": 0.11011904761904762,
+      "changed_class_transitions": 40,
+      "changed_direction_accuracy": 0.625,
+      "unchanged_class_transitions": 92,
+      "unchanged_direction_accuracy": 0.8260869565217391
+    },
+    "distilbert_experiment_2": {
+      "external_passage_macro_f1": 0.5432003609475483,
+      "external_whole_macro_f1": 0.5928728000560164,
+      "external_count": 570,
+      "synthetic_neutral_abstained": 0,
+      "synthetic_neutral_count": 6,
+      "synthetic_mixed_exact": 2,
+      "synthetic_mixed_count": 8,
+      "observed_person_days": 28,
+      "daily_frequency_mae": 0.125,
+      "changed_class_transitions": 40,
+      "changed_direction_accuracy": 0.6,
+      "unchanged_class_transitions": 92,
+      "unchanged_direction_accuracy": 0.7608695652173914
+    }
+  },
+  "v2_minus_baseline_external_passage_macro_f1_bootstrap_95_percent_interval": [
+    0.1257130105574969,
+    0.23164687441269005
+  ],
+  "bootstrap_author_groups": 63,
+  "bootstrap_replicates": 1000,
+  "protocol_sha256": "a6d0ebb35872c12d72b53e7fb0d261bdd4b4a87d5f1834982196ef81a9269547"
+}

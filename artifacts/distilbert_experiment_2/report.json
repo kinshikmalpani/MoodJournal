@@ -1,0 +1,248 @@
+{
+  "model_version": "distilbert-experiment-2",
+  "starting_checkpoint": "C:\\Users\\kinsh\\OneDrive\\Desktop\\MoodJournal\\artifacts\\distilbert_continued\\best",
+  "configuration": {
+    "epochs": 3,
+    "batch_size": 32,
+    "threads": 4,
+    "trainable_layers": 2,
+    "learning_rate": 1e-05
+  },
+  "best_epoch": 3,
+  "best_validation_macro_f1": 0.8900993387664221,
+  "data_audit": {
+    "test": {
+      "original_rows": 2000,
+      "retained_rows": 2000,
+      "overlap_rows_removed": 0,
+      "conflicting_rows_removed": 0,
+      "class_counts": {
+        "sadness": 581,
+        "joy": 695,
+        "fear": 224,
+        "anger": 275,
+        "love": 159,
+        "surprise": 66
+      }
+    },
+    "val": {
+      "original_rows": 2000,
+      "retained_rows": 1993,
+      "overlap_rows_removed": 3,
+      "conflicting_rows_removed": 4,
+      "class_counts": {
+        "sadness": 550,
+        "love": 176,
+        "anger": 274,
+        "joy": 702,
+        "fear": 211,
+        "surprise": 80
+      }
+    },
+    "train": {
+      "original_rows": 16000,
+      "retained_rows": 15923,
+      "overlap_rows_removed": 16,
+      "conflicting_rows_removed": 60,
+      "class_counts": {
+        "sadness": 4661,
+        "anger": 2152,
+        "love": 1283,
+        "surprise": 564,
+        "fear": 1923,
+        "joy": 5340
+      }
+    },
+    "archive_sha256": "96666e569aff41df3f448fc5e560051dd973ec2e609cb054e075600c878d3a00",
+    "policy": "Normalize whitespace/case; preserve test before validation before train; deduplicate within split and exclude conflicting groups. No data.zip used."
+  },
+  "validation_history": [
+    {
+      "epoch": 1,
+      "validation_macro_f1": 0.887408462627258,
+      "training_loss": 0.11756356115860632
+    },
+    {
+      "epoch": 2,
+      "validation_macro_f1": 0.886668159767698,
+      "training_loss": 0.10328026190512331
+    },
+    {
+      "epoch": 3,
+      "validation_macro_f1": 0.8900993387664221,
+      "training_loss": 0.08821732720573354
+    }
+  ],
+  "threshold_trials": [
+    {
+      "threshold": 0.35,
+      "coverage": 1.0,
+      "accuracy": 0.9177119919719017
+    },
+    {
+      "threshold": 0.4,
+      "coverage": 0.9984947315604616,
+      "accuracy": 0.9180904522613065
+    },
+    {
+      "threshold": 0.45,
+      "coverage": 0.9979929754139488,
+      "accuracy": 0.9180492709904474
+    },
+    {
+      "threshold": 0.5,
+      "coverage": 0.9944806823883593,
+      "accuracy": 0.9202825428859738
+    },
+    {
+      "threshold": 0.55,
+      "coverage": 0.9774209734069242,
+      "accuracy": 0.9281314168377823
+    },
+    {
+      "threshold": 0.6,
+      "coverage": 0.9618665328650275,
+      "accuracy": 0.9374021909233177
+    },
+    {
+      "threshold": 0.65,
+      "coverage": 0.9493226292022078,
+      "accuracy": 0.9423890063424947
+    },
+    {
+      "threshold": 0.7,
+      "coverage": 0.9342699448068239,
+      "accuracy": 0.9505907626208379
+    },
+    {
+      "threshold": 0.75,
+      "coverage": 0.9237330657300552,
+      "accuracy": 0.9538294405214557
+    },
+    {
+      "threshold": 0.8,
+      "coverage": 0.9066733567486202,
+      "accuracy": 0.9618151632540122
+    },
+    {
+      "threshold": 0.85,
+      "coverage": 0.8956347215253387,
+      "accuracy": 0.9658263305322129
+    }
+  ],
+  "uncertainty_threshold": 0.35,
+  "training_seconds": 2142.7981535000727,
+  "test": {
+    "accuracy": 0.915,
+    "macro_f1": 0.8760508672797273,
+    "classification_report": {
+      "anger": {
+        "precision": 0.9188191881918819,
+        "recall": 0.9054545454545454,
+        "f1-score": 0.9120879120879121,
+        "support": 275.0
+      },
+      "fear": {
+        "precision": 0.8810572687224669,
+        "recall": 0.8928571428571429,
+        "f1-score": 0.8869179600886918,
+        "support": 224.0
+      },
+      "joy": {
+        "precision": 0.9314285714285714,
+        "recall": 0.9381294964028777,
+        "f1-score": 0.9347670250896057,
+        "support": 695.0
+      },
+      "love": {
+        "precision": 0.8223684210526315,
+        "recall": 0.7861635220125787,
+        "f1-score": 0.8038585209003215,
+        "support": 159.0
+      },
+      "sadness": {
+        "precision": 0.9453924914675768,
+        "recall": 0.9535283993115319,
+        "f1-score": 0.9494430162810625,
+        "support": 581.0
+      },
+      "surprise": {
+        "precision": 0.78125,
+        "recall": 0.7575757575757576,
+        "f1-score": 0.7692307692307693,
+        "support": 66.0
+      },
+      "accuracy": 0.915,
+      "macro avg": {
+        "precision": 0.8800526568105215,
+        "recall": 0.8722848106024057,
+        "f1-score": 0.8760508672797273,
+        "support": 2000.0
+      },
+      "weighted avg": {
+        "precision": 0.9144835392897439,
+        "recall": 0.915,
+        "f1-score": 0.914683004686499,
+        "support": 2000.0
+      }
+    },
+    "labels": [
+      "anger",
+      "fear",
+      "joy",
+      "love",
+      "sadness",
+      "surprise"
+    ],
+    "confusion_matrix": [
+      [
+        249,
+        10,
+        5,
+        0,
+        11,
+        0
+      ],
+      [
+        7,
+        200,
+        2,
+        0,
+        4,
+        11
+      ],
+      [
+        1,
+        1,
+        652,
+        25,
+        13,
+        3
+      ],
+      [
+        1,
+        1,
+        31,
+        125,
+        1,
+        0
+      ],
+      [
+        12,
+        6,
+        7,
+        2,
+        554,
+        0
+      ],
+      [
+        1,
+        9,
+        3,
+        0,
+        3,
+        50
+      ]
+    ]
+  }
+}

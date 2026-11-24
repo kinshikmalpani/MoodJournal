@@ -1,0 +1,264 @@
+{
+  "model_version": "distilbert-continued-v1-epoch3",
+  "training_status": "New continuation experiment from saved first-epoch weights. Original optimizer/scheduler were unavailable and reset; subsequent resumes restore full state.",
+  "configuration": {
+    "max_additional_epochs": 3,
+    "patience": 1,
+    "min_delta": 0.002,
+    "learning_rate": 2e-05,
+    "batch_size": 32,
+    "trainable_layers": 2,
+    "max_tokens": 96,
+    "seed": 42,
+    "checkpoint_every_steps": 50,
+    "source_weights_sha256": "5f20298581d0c68501d86a8f30123e407a21fa727d5d0b256785b903c6bd76ce",
+    "dataset_sha256": "96666e569aff41df3f448fc5e560051dd973ec2e609cb054e075600c878d3a00"
+  },
+  "selected_additional_epoch": 3,
+  "completed_additional_epochs": 3,
+  "stop_reason": "maximum_epochs",
+  "data_audit": {
+    "test": {
+      "original_rows": 2000,
+      "retained_rows": 2000,
+      "overlap_rows_removed": 0,
+      "conflicting_rows_removed": 0,
+      "class_counts": {
+        "sadness": 581,
+        "joy": 695,
+        "fear": 224,
+        "anger": 275,
+        "love": 159,
+        "surprise": 66
+      }
+    },
+    "val": {
+      "original_rows": 2000,
+      "retained_rows": 1993,
+      "overlap_rows_removed": 3,
+      "conflicting_rows_removed": 4,
+      "class_counts": {
+        "sadness": 550,
+        "love": 176,
+        "anger": 274,
+        "joy": 702,
+        "fear": 211,
+        "surprise": 80
+      }
+    },
+    "train": {
+      "original_rows": 16000,
+      "retained_rows": 15923,
+      "overlap_rows_removed": 16,
+      "conflicting_rows_removed": 60,
+      "class_counts": {
+        "sadness": 4661,
+        "anger": 2152,
+        "love": 1283,
+        "surprise": 564,
+        "fear": 1923,
+        "joy": 5340
+      }
+    },
+    "archive_sha256": "96666e569aff41df3f448fc5e560051dd973ec2e609cb054e075600c878d3a00",
+    "policy": "Normalize whitespace/case; preserve test before validation before train; deduplicate within split and exclude conflicting groups. No data.zip used."
+  },
+  "validation_trials": [
+    {
+      "additional_epoch": 0,
+      "validation_macro_f1": 0.8240705246301737,
+      "note": "Starting saved first-epoch model."
+    },
+    {
+      "additional_epoch": 1,
+      "validation_macro_f1": 0.8693890712861884,
+      "training_loss": 0.33856306508572465
+    },
+    {
+      "additional_epoch": 2,
+      "validation_macro_f1": 0.8759823673024038,
+      "training_loss": 0.22540697913961
+    },
+    {
+      "additional_epoch": 3,
+      "validation_macro_f1": 0.8883408800090232,
+      "training_loss": 0.1645231562475842
+    }
+  ],
+  "threshold_trials": [
+    {
+      "threshold": 0.35,
+      "coverage": 0.9989964877069744,
+      "accuracy": 0.9131089904570567
+    },
+    {
+      "threshold": 0.4,
+      "coverage": 0.9979929754139488,
+      "accuracy": 0.9135243841126194
+    },
+    {
+      "threshold": 0.45,
+      "coverage": 0.9964877069744105,
+      "accuracy": 0.9138972809667674
+    },
+    {
+      "threshold": 0.5,
+      "coverage": 0.9924736578023081,
+      "accuracy": 0.9155712841253791
+    },
+    {
+      "threshold": 0.55,
+      "coverage": 0.9809332664325138,
+      "accuracy": 0.919693094629156
+    },
+    {
+      "threshold": 0.6,
+      "coverage": 0.9648770697441044,
+      "accuracy": 0.9277171086843474
+    },
+    {
+      "threshold": 0.65,
+      "coverage": 0.9498243853487205,
+      "accuracy": 0.9350237717908082
+    },
+    {
+      "threshold": 0.7,
+      "coverage": 0.9297541394882087,
+      "accuracy": 0.9433351322180248
+    },
+    {
+      "threshold": 0.75,
+      "coverage": 0.9152032112393377,
+      "accuracy": 0.9517543859649122
+    },
+    {
+      "threshold": 0.8,
+      "coverage": 0.9001505268439538,
+      "accuracy": 0.9576365663322185
+    },
+    {
+      "threshold": 0.85,
+      "coverage": 0.8780732563973909,
+      "accuracy": 0.9651428571428572
+    }
+  ],
+  "uncertainty_threshold": 0.35,
+  "test": {
+    "accuracy": 0.903,
+    "macro_f1": 0.8636327784829413,
+    "classification_report": {
+      "anger": {
+        "precision": 0.9080882352941176,
+        "recall": 0.8981818181818182,
+        "f1-score": 0.903107861060329,
+        "support": 275.0
+      },
+      "fear": {
+        "precision": 0.9468085106382979,
+        "recall": 0.7946428571428571,
+        "f1-score": 0.8640776699029126,
+        "support": 224.0
+      },
+      "joy": {
+        "precision": 0.92992700729927,
+        "recall": 0.9165467625899281,
+        "f1-score": 0.9231884057971015,
+        "support": 695.0
+      },
+      "love": {
+        "precision": 0.7660818713450293,
+        "recall": 0.8238993710691824,
+        "f1-score": 0.793939393939394,
+        "support": 159.0
+      },
+      "sadness": {
+        "precision": 0.9387755102040817,
+        "recall": 0.9500860585197934,
+        "f1-score": 0.9443969204448246,
+        "support": 581.0
+      },
+      "surprise": {
+        "precision": 0.6354166666666666,
+        "recall": 0.9242424242424242,
+        "f1-score": 0.7530864197530864,
+        "support": 66.0
+      },
+      "accuracy": 0.903,
+      "macro avg": {
+        "precision": 0.8541829669079105,
+        "recall": 0.8845998819576671,
+        "f1-score": 0.8636327784829413,
+        "support": 2000.0
+      },
+      "weighted avg": {
+        "precision": 0.9086408650671424,
+        "recall": 0.903,
+        "f1-score": 0.9040793399986694,
+        "support": 2000.0
+      }
+    },
+    "labels": [
+      "anger",
+      "fear",
+      "joy",
+      "love",
+      "sadness",
+      "surprise"
+    ],
+    "confusion_matrix": [
+      [
+        247,
+        5,
+        8,
+        1,
+        14,
+        0
+      ],
+      [
+        10,
+        178,
+        4,
+        0,
+        5,
+        27
+      ],
+      [
+        1,
+        0,
+        637,
+        37,
+        12,
+        8
+      ],
+      [
+        1,
+        1,
+        24,
+        131,
+        2,
+        0
+      ],
+      [
+        12,
+        4,
+        11,
+        2,
+        552,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        3,
+        61
+      ]
+    ]
+  },
+  "limitations": [
+    "Continuation with a fresh optimizer, not exact resume of original interrupted run.",
+    "Single seed, frozen lower encoder layers, no independent journal validation.",
+    "Original test set previously reported; this is a repeated benchmark comparison, not a new untouched external test."
+  ]
+}

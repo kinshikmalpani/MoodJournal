@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.pyc
+artifacts/
+local_data/
+.env
+.spotifycache
+transfer/
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.db
+*.log
+.streamlit/secrets.toml
+deliverables/qa/
+# Original archives have not had their redistribution provenance verified.
+/data.zip
+/Emotions Dataset.zip

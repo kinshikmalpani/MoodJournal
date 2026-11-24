@@ -1,0 +1,248 @@
+{
+  "model_version": "distilbert-partial-epoch1-v1",
+  "checkpoint": "distilbert/distilbert-base-uncased",
+  "selected_epoch": 1,
+  "training_status": "Recovered completed first-epoch checkpoint after interruption during epoch two. Later unsaved updates were lost. No completed two-epoch comparison is claimed.",
+  "configuration": {
+    "planned_epochs": 2,
+    "saved_checkpoint_epoch": 1,
+    "batch_size": 32,
+    "threads": 4,
+    "trainable_layers": 2,
+    "training_max_tokens": 96,
+    "learning_rate": 3e-05,
+    "batching": "length-grouped, shuffled batch order"
+  },
+  "seed": 42,
+  "device": "cpu",
+  "data_audit": {
+    "test": {
+      "original_rows": 2000,
+      "retained_rows": 2000,
+      "overlap_rows_removed": 0,
+      "conflicting_rows_removed": 0,
+      "class_counts": {
+        "sadness": 581,
+        "joy": 695,
+        "fear": 224,
+        "anger": 275,
+        "love": 159,
+        "surprise": 66
+      }
+    },
+    "val": {
+      "original_rows": 2000,
+      "retained_rows": 1993,
+      "overlap_rows_removed": 3,
+      "conflicting_rows_removed": 4,
+      "class_counts": {
+        "sadness": 550,
+        "love": 176,
+        "anger": 274,
+        "joy": 702,
+        "fear": 211,
+        "surprise": 80
+      }
+    },
+    "train": {
+      "original_rows": 16000,
+      "retained_rows": 15923,
+      "overlap_rows_removed": 16,
+      "conflicting_rows_removed": 60,
+      "class_counts": {
+        "sadness": 4661,
+        "anger": 2152,
+        "love": 1283,
+        "surprise": 564,
+        "fear": 1923,
+        "joy": 5340
+      }
+    },
+    "archive_sha256": "96666e569aff41df3f448fc5e560051dd973ec2e609cb054e075600c878d3a00",
+    "policy": "Normalize whitespace/case; preserve test before validation before train; deduplicate within split and exclude conflicting groups. No data.zip used."
+  },
+  "validation_trials": [
+    {
+      "epoch": 1,
+      "validation_macro_f1": 0.8240705246301737,
+      "note": "Re-evaluated saved checkpoint; original training log was not persisted."
+    }
+  ],
+  "threshold_trials": [
+    {
+      "threshold": 0.35,
+      "coverage": 0.9954841946813848,
+      "accuracy": 0.8669354838709677
+    },
+    {
+      "threshold": 0.4,
+      "coverage": 0.9874560963371801,
+      "accuracy": 0.8699186991869918
+    },
+    {
+      "threshold": 0.45,
+      "coverage": 0.9729051680883091,
+      "accuracy": 0.8762248581743166
+    },
+    {
+      "threshold": 0.5,
+      "coverage": 0.9407927747114903,
+      "accuracy": 0.8885333333333333
+    },
+    {
+      "threshold": 0.55,
+      "coverage": 0.9016557952834923,
+      "accuracy": 0.9031719532554258
+    },
+    {
+      "threshold": 0.6,
+      "coverage": 0.8725539387857502,
+      "accuracy": 0.9160437032777459
+    },
+    {
+      "threshold": 0.65,
+      "coverage": 0.8399397892624184,
+      "accuracy": 0.9277180406212664
+    },
+    {
+      "threshold": 0.7,
+      "coverage": 0.7907676869041645,
+      "accuracy": 0.9378172588832487
+    },
+    {
+      "threshold": 0.75,
+      "coverage": 0.7400903161063723,
+      "accuracy": 0.9491525423728814
+    },
+    {
+      "threshold": 0.8,
+      "coverage": 0.6813848469643753,
+      "accuracy": 0.9609720176730486
+    },
+    {
+      "threshold": 0.85,
+      "coverage": 0.6171600602107375,
+      "accuracy": 0.9707317073170731
+    }
+  ],
+  "uncertainty_threshold": 0.35,
+  "evaluation_seconds": 78.36449230019934,
+  "test": {
+    "accuracy": 0.8435,
+    "macro_f1": 0.7854304845629175,
+    "classification_report": {
+      "anger": {
+        "precision": 0.8198529411764706,
+        "recall": 0.8109090909090909,
+        "f1-score": 0.8153564899451554,
+        "support": 275.0
+      },
+      "fear": {
+        "precision": 0.8280542986425339,
+        "recall": 0.8169642857142857,
+        "f1-score": 0.8224719101123595,
+        "support": 224.0
+      },
+      "joy": {
+        "precision": 0.89,
+        "recall": 0.8964028776978418,
+        "f1-score": 0.8931899641577061,
+        "support": 695.0
+      },
+      "love": {
+        "precision": 0.673202614379085,
+        "recall": 0.6477987421383647,
+        "f1-score": 0.6602564102564102,
+        "support": 159.0
+      },
+      "sadness": {
+        "precision": 0.866779089376054,
+        "recall": 0.8846815834767642,
+        "f1-score": 0.8756388415672913,
+        "support": 581.0
+      },
+      "surprise": {
+        "precision": 0.6721311475409836,
+        "recall": 0.6212121212121212,
+        "f1-score": 0.6456692913385826,
+        "support": 66.0
+      },
+      "accuracy": 0.8435,
+      "macro avg": {
+        "precision": 0.7916700151858546,
+        "recall": 0.7796614501914113,
+        "f1-score": 0.7854304845629175,
+        "support": 2000.0
+      },
+      "weighted avg": {
+        "precision": 0.8422461220354619,
+        "recall": 0.8435,
+        "f1-score": 0.842782438549702,
+        "support": 2000.0
+      }
+    },
+    "labels": [
+      "anger",
+      "fear",
+      "joy",
+      "love",
+      "sadness",
+      "surprise"
+    ],
+    "confusion_matrix": [
+      [
+        223,
+        8,
+        7,
+        4,
+        30,
+        3
+      ],
+      [
+        9,
+        183,
+        4,
+        0,
+        14,
+        14
+      ],
+      [
+        7,
+        2,
+        623,
+        38,
+        22,
+        3
+      ],
+      [
+        7,
+        2,
+        39,
+        103,
+        8,
+        0
+      ],
+      [
+        25,
+        16,
+        18,
+        8,
+        514,
+        0
+      ],
+      [
+        1,
+        10,
+        9,
+        0,
+        5,
+        41
+      ]
+    ]
+  },
+  "limitations": [
+    "One completed epoch of partial fine-tuning; not a completed two-epoch experiment.",
+    "One seed; short-text benchmark only, no independently labelled journal test.",
+    "Uncalibrated probabilities; no neutral class."
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "model_version": "tfidf-logreg-v1",
+  "data_audit": {
+    "test": {
+      "original_rows": 2000,
+      "retained_rows": 2000,
+      "overlap_rows_removed": 0,
+      "conflicting_rows_removed": 0,
+      "class_counts": {
+        "sadness": 581,
+        "joy": 695,
+        "fear": 224,
+        "anger": 275,
+        "love": 159,
+        "surprise": 66
+      }
+    },
+    "val": {
+      "original_rows": 2000,
+      "retained_rows": 1993,
+      "overlap_rows_removed": 3,
+      "conflicting_rows_removed": 4,
+      "class_counts": {
+        "sadness": 550,
+        "love": 176,
+        "anger": 274,
+        "joy": 702,
+        "fear": 211,
+        "surprise": 80
+      }
+    },
+    "train": {
+      "original_rows": 16000,
+      "retained_rows": 15923,
+      "overlap_rows_removed": 16,
+      "conflicting_rows_removed": 60,
+      "class_counts": {
+        "sadness": 4661,
+        "anger": 2152,
+        "love": 1283,
+        "surprise": 564,
+        "fear": 1923,
+        "joy": 5340
+      }
+    },
+    "archive_sha256": "96666e569aff41df3f448fc5e560051dd973ec2e609cb054e075600c878d3a00",
+    "policy": "Normalize whitespace/case; preserve test before validation before train; deduplicate within split and exclude conflicting groups. No data.zip used."
+  },
+  "validation_trials": [
+    {
+      "class_weight": null,
+      "validation_macro_f1": 0.8358367884019081
+    },
+    {
+      "class_weight": "balanced",
+      "validation_macro_f1": 0.86101904635284
+    }
+  ],
+  "threshold_trials": [
+    {
+      "threshold": 0.35,
+      "coverage": 0.9528349222277973,
+      "accuracy": 0.909952606635071
+    },
+    {
+      "threshold": 0.4,
+      "coverage": 0.9051680883090818,
+      "accuracy": 0.9218403547671841
+    },
+    {
+      "threshold": 0.45,
+      "coverage": 0.8564977420973406,
+      "accuracy": 0.9332161687170475
+    },
+    {
+      "threshold": 0.5,
+      "coverage": 0.7932764676367285,
+      "accuracy": 0.9430740037950665
+    },
+    {
+      "threshold": 0.55,
+      "coverage": 0.7270446562970396,
+      "accuracy": 0.9510006901311249
+    },
+    {
+      "threshold": 0.6,
+      "coverage": 0.6482689412945308,
+      "accuracy": 0.9574303405572755
+    },
+    {
+      "threshold": 0.65,
+      "coverage": 0.5850476668339187,
+      "accuracy": 0.9631217838765008
+    },
+    {
+      "threshold": 0.7,
+      "coverage": 0.5022579026593076,
+      "accuracy": 0.965034965034965
+    },
+    {
+      "threshold": 0.75,
+      "coverage": 0.41695935775213244,
+      "accuracy": 0.97352587244284
+    },
+    {
+      "threshold": 0.8,
+      "coverage": 0.3401906673356749,
+      "accuracy": 0.9808259587020649
+    },
+    {
+      "threshold": 0.85,
+      "coverage": 0.2483692925238334,
+      "accuracy": 0.9878787878787879
+    }
+  ],
+  "uncertainty_threshold": 0.35,
+  "test": {
+    "accuracy": 0.8825,
+    "macro_f1": 0.8396825551653387,
+    "classification_report": {
+      "anger": {
+        "precision": 0.8687943262411347,
+        "recall": 0.8909090909090909,
+        "f1-score": 0.8797127468581688,
+        "support": 275.0
+      },
+      "fear": {
+        "precision": 0.8761904761904762,
+        "recall": 0.8214285714285714,
+        "f1-score": 0.847926267281106,
+        "support": 224.0
+      },
+      "joy": {
+        "precision": 0.9167883211678832,
+        "recall": 0.9035971223021583,
+        "f1-score": 0.9101449275362319,
+        "support": 695.0
+      },
+      "love": {
+        "precision": 0.7127659574468085,
+        "recall": 0.8427672955974843,
+        "f1-score": 0.7723342939481268,
+        "support": 159.0
+      },
+      "sadness": {
+        "precision": 0.9325044404973357,
+        "recall": 0.9036144578313253,
+        "f1-score": 0.9178321678321678,
+        "support": 581.0
+      },
+      "surprise": {
+        "precision": 0.6805555555555556,
+        "recall": 0.7424242424242424,
+        "f1-score": 0.7101449275362319,
+        "support": 66.0
+      },
+      "accuracy": 0.8825,
+      "macro avg": {
+        "precision": 0.8312665128498656,
+        "recall": 0.8507901300821453,
+        "f1-score": 0.8396825551653387,
+        "support": 2000.0
+      },
+      "weighted avg": {
+        "precision": 0.8861922617121596,
+        "recall": 0.8825,
+        "f1-score": 0.8836692106801391,
+        "support": 2000.0
+      }
+    },
+    "labels": [
+      "anger",
+      "fear",
+      "joy",
+      "love",
+      "sadness",
+      "surprise"
+    ],
+    "confusion_matrix": [
+      [
+        245,
+        7,
+        8,
+        1,
+        14,
+        0
+      ],
+      [
+        6,
+        184,
+        4,
+        2,
+        14,
+        14
+      ],
+      [
+        5,
+        3,
+        628,
+        45,
+        6,
+        8
+      ],
+      [
+        2,
+        0,
+        21,
+        134,
+        1,
+        1
+      ],
+      [
+        23,
+        10,
+        17,
+        6,
+        525,
+        0
+      ],
+      [
+        1,
+        6,
+        7,
+        0,
+        3,
+        49
+      ]
+    ]
+  },
+  "limitations": [
+    "Original short-text test only; not independent journal validation.",
+    "Softmax/class probabilities are uncalibrated model scores, not emotion intensity.",
+    "Threshold validated on whole short texts, not journal chunks.",
+    "No neutral class or clinical interpretation."
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "version": "distilbert-experiment-2",
+  "threshold": 0.35,
+  "weights_sha256": "2fa3eb9c7c49fc1fb46707a3bff050159f3f2eb4b3e16b7dfde8a224aa6434a8"
+}

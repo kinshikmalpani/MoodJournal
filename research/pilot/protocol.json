@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "prepared_date": "2026-11-13",
+  "source_url": "https://www.romanklinger.de/data-sets/deISEARenISEAR.zip",
+  "paper": "https://aclanthology.org/P19-1391/",
+  "citation": "Troiano, Pado and Klinger (2019), Crowdsourcing and Validating Event-focused Emotion Corpora for German and English, ACL.",
+  "licence": "ODC-By 1.0; original licence and attribution retained",
+  "source_sha256": "38aa785caaf668652d9278f583990802d7eccf7569d0a206cabb49f9bbb89861",
+  "external_original_count": 1001,
+  "retained_count": 999,
+  "label_counts": {
+    "fear": 143,
+    "shame": 143,
+    "guilt": 143,
+    "disgust": 143,
+    "sadness": 142,
+    "anger": 143,
+    "joy": 142
+  },
+  "exclusions": [
+    {
+      "id": "1070",
+      "reason": "external_duplicate"
+    },
+    {
+      "id": "993",
+      "reason": "external_duplicate"
+    }
+  ],
+  "overlap_policy": "Exact normalized case/whitespace comparison against all raw original benchmark splits; near-duplicates and pretraining exposure not ruled out.",
+  "primary_endpoint": "External supported four-class macro-F1, app passage mean; all six model outputs remain possible. Original author prompt labels are targets. No target fine-tuning.",
+  "secondary_endpoints": "Whole-entry inference; unsupported-class abstention; synthetic mixed/neutral performance; daily passage-frequency MAE and adjacent-day direction agreement.",
+  "trend_definition": "Mean of entry passage-label frequencies per observed day; neutral/uncertain contributes zero to six emotions. Calendar-adjacent pairs only, delta deadband 0.05. This is a diagnostic frequency measure, not the app softmax chart or mood intensity.",
+  "synthetic_count": 32,
+  "synthetic_people": 4,
+  "synthetic_limit": "AI-authored non-independent stress test; no human pilot or clinical validation.",
+  "models": {
+    "baseline": {
+      "path": "artifacts\\baseline.joblib",
+      "sha256": "9b5f090ec185823bd825615dd0bf5893b4660a98ec37d49900b384dce5d76750"
+    },
+    "distilbert_continued": {
+      "path": "artifacts\\distilbert_continued\\best\\model.safetensors",
+      "sha256": "838e42d7c1531b48322777548ce1606982dd1003e76ecd807ecc04184601b9b8"
+    },
+    "distilbert_experiment_2": {
+      "path": "artifacts\\distilbert_experiment_2\\best_model\\model.safetensors",
+      "sha256": "2fa3eb9c7c49fc1fb46707a3bff050159f3f2eb4b3e16b7dfde8a224aa6434a8"
+    }
+  },
+  "files": {
+    "external.jsonl": "a2638281f7d1676335d2b5dbeb4e223bc08dd5751d94785ee98fd50d1a2cf936",
+    "synthetic.jsonl": "10f1b3dc25b44518f0a89228d414f8bb89df6e05337af9d849126aefee0123ba"
+  },
+  "no_tuning": true
+}

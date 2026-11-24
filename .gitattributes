@@ -1,0 +1,7 @@
+# Preserve exact bytes so frozen research hashes survive cross-platform clones.
+* -text
+*.zip binary
+*.docx binary
+*.joblib binary
+*.safetensors binary
+*.pt binary

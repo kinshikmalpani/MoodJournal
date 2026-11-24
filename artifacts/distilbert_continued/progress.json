@@ -1,0 +1,10 @@
+{
+  "phase": "complete",
+  "additional_epoch": 4,
+  "next_batch": 0,
+  "steps_per_epoch": 498,
+  "global_step": 1494,
+  "best_validation_macro_f1": 0.8883408800090232,
+  "elapsed_seconds": 37406,
+  "max_additional_epochs": 3
+}

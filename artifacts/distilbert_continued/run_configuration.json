@@ -1,0 +1,13 @@
+{
+  "max_additional_epochs": 3,
+  "patience": 1,
+  "min_delta": 0.002,
+  "learning_rate": 2e-05,
+  "batch_size": 32,
+  "trainable_layers": 2,
+  "max_tokens": 96,
+  "seed": 42,
+  "checkpoint_every_steps": 50,
+  "source_weights_sha256": "5f20298581d0c68501d86a8f30123e407a21fa727d5d0b256785b903c6bd76ce",
+  "dataset_sha256": "96666e569aff41df3f448fc5e560051dd973ec2e609cb054e075600c878d3a00"
+}

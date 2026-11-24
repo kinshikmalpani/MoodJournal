@@ -1,0 +1,29 @@
+{
+  "configuration": {
+    "epochs": 3,
+    "batch_size": 32,
+    "threads": 4,
+    "trainable_layers": 2,
+    "learning_rate": 1e-05
+  },
+  "starting_validation_macro_f1": 0.8883408800090232,
+  "best_validation_macro_f1": 0.8900993387664221,
+  "best_epoch": 3,
+  "history": [
+    {
+      "epoch": 1,
+      "validation_macro_f1": 0.887408462627258,
+      "training_loss": 0.11756356115860632
+    },
+    {
+      "epoch": 2,
+      "validation_macro_f1": 0.886668159767698,
+      "training_loss": 0.10328026190512331
+    },
+    {
+      "epoch": 3,
+      "validation_macro_f1": 0.8900993387664221,
+      "training_loss": 0.08821732720573354
+    }
+  ]
+}

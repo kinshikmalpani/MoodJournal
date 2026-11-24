@@ -1,0 +1,22 @@
+[
+  {
+    "additional_epoch": 0,
+    "validation_macro_f1": 0.8240705246301737,
+    "note": "Starting saved first-epoch model."
+  },
+  {
+    "additional_epoch": 1,
+    "validation_macro_f1": 0.8693890712861884,
+    "training_loss": 0.33856306508572465
+  },
+  {
+    "additional_epoch": 2,
+    "validation_macro_f1": 0.8759823673024038,
+    "training_loss": 0.22540697913961
+  },
+  {
+    "additional_epoch": 3,
+    "validation_macro_f1": 0.8883408800090232,
+    "training_loss": 0.1645231562475842
+  }
+]

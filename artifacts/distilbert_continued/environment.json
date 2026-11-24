@@ -1,0 +1,17 @@
+{
+  "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "5.22.2",
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "filelock": "4.2.10"
+  },
+  "source_hashes": {
+    "continue_transformer.py": "c16235b6f039ffc645eaa7089d5fef4f0c1b2abdee47bc912d5ea7e6c6f0020a",
+    "training_state.py": "c68090392dc1422e378e4ca5dedf84cd50cf49ca84270ea1dcf6c0b07a724eb9",
+    "train_transformer.py": "6d9de8573ed1f666a8d67db2713f3535e976ae6d3c197f0b248e9542acc14ac6",
+    "train_baseline.py": "978fbf58d6b363ed63282073290d995004c2ddf0759b176bcfdbdf585b38b9d8"
+  }
+}

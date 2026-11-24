@@ -1,0 +1,14 @@
+{
+  "research\\evaluate_pilot.py": "96d41c040126a7c5088b75070049cefec8b612953a910817bd8ba8b39af59210",
+  "model_runtime.py": "4e8769eeee8929fa5e9f78979aff9ee01f2bc7b37fa5f5a3c982347ca98057c2",
+  "journal_core.py": "be52777e374d60433e65192cae549a3908e134ae964dbcfc498958b0736fb13c",
+  "research\\pilot\\protocol.json": "a6d0ebb35872c12d72b53e7fb0d261bdd4b4a87d5f1834982196ef81a9269547",
+  "artifacts\\distilbert_continued\\best\\config.json": "15fe5a8d65158c1d39764bfa813d903182ddd7b986ace360bb2dda9839a7f687",
+  "artifacts\\distilbert_continued\\best\\tokenizer.json": "d542861653d0d204783c94395fdf32eef9e800d5fa565a2892c3f1375aa835e9",
+  "artifacts\\distilbert_continued\\best\\tokenizer_config.json": "b657b55e8e188d9ead36763591cdef4b0f0e61cc27e57c4b505cb6faf8b00bb7",
+  "artifacts\\distilbert_continued\\metadata.json": "106a1c28248906080b2110e9fa5da4fe39db127626746ed48b2e0cbfb9e05599",
+  "artifacts\\distilbert_experiment_2\\best_model\\config.json": "15fe5a8d65158c1d39764bfa813d903182ddd7b986ace360bb2dda9839a7f687",
+  "artifacts\\distilbert_experiment_2\\best_model\\tokenizer.json": "d542861653d0d204783c94395fdf32eef9e800d5fa565a2892c3f1375aa835e9",
+  "artifacts\\distilbert_experiment_2\\best_model\\tokenizer_config.json": "b657b55e8e188d9ead36763591cdef4b0f0e61cc27e57c4b505cb6faf8b00bb7",
+  "artifacts\\distilbert_experiment_2\\metadata.json": "1b5398ebdd441742504fcb5045f1074e4c2c383d03c001ab2e8009a2e772b37f"
+}

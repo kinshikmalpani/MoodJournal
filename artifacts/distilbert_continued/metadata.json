@@ -1,0 +1,5 @@
+{
+  "version": "distilbert-continued-v1-epoch3",
+  "threshold": 0.35,
+  "weights_sha256": "838e42d7c1531b48322777548ce1606982dd1003e76ecd807ecc04184601b9b8"
+}

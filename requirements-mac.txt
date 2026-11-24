@@ -1,0 +1,12 @@
+# Direct dependencies matched to the versions used to create the saved artifacts.
+# Install in a NEW native Apple-silicon Python 3.13 environment, not the Windows .venv.
+scikit-learn==1.9.1
+joblib==1.6.0
+numpy==2.5.4
+scipy==1.18.1
+pandas==3.1.1
+streamlit==1.67.0
+torch==2.15.0
+transformers==5.22.2
+filelock==4.2.10
+tzdata==2026.6
