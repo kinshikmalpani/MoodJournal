@@ -2,7 +2,9 @@
 
 ## GitHub checkout
 
-The repository includes application and training code, tests, research documentation, attributed external evaluation data, recorded reports, and the trained TF-IDF baseline. Neural weight files and the full continuation checkpoint are packaged separately by `python package_release.py` as `transfer/MoodJournal-models-v1.zip`; extract that trusted bundle into this project root to restore transformer inference and training state. The bundle contains a checksum manifest. Availability of a hosted bundle is recorded in the GitHub Releases section when uploaded.
+The repository includes application and training code, tests, research documentation, attributed external evaluation data, recorded reports, and the trained TF-IDF baseline. Download the [trained-model bundle (1.10 GB)](https://github.com/kinshikmalpani/MoodJournal/releases/download/v1.0.0/MoodJournal-models-v1.zip) from [release v1.0.0](https://github.com/kinshikmalpani/MoodJournal/releases/tag/v1.0.0) and extract it into this project root, merging the `artifacts` folder, to restore transformer inference and the available continuation training checkpoint. No retraining is needed for inference. The bundle contains a per-file checksum manifest and can be rebuilt from local trained artifacts with `python package_release.py`.
+
+Bundle SHA256: `8a8370db36a7faff7e7ef440d5ab228c29e0255cf32f2178d1a1475084703526`.
 
 Personal journals, demo databases, credentials, virtual environments, caches, transfer backups, and rendering intermediates are excluded. The original `Emotions Dataset.zip` and unknown-source `data.zip` are also excluded because their redistribution provenance has not been verified. Training and split-reproduction tests require the original archive supplied separately; the existing baseline can run without it. The source checksum is recorded in the reports. The presentation guide DOCX is a draft whose visual layout verification was not completed.
 
